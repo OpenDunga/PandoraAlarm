@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0775CD72155E1AA800275102 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD71155E1AA800275102 /* UIKit.framework */; };
+		0775CD74155E1AA800275102 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD73155E1AA800275102 /* Foundation.framework */; };
+		0775CD76155E1AA800275102 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD75155E1AA800275102 /* CoreGraphics.framework */; };
+		0775CD7C155E1AA800275102 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD7A155E1AA800275102 /* InfoPlist.strings */; };
+		0775CD7E155E1AA800275102 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD7D155E1AA800275102 /* main.m */; };
+		0775CD82155E1AA800275102 /* DAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD81155E1AA800275102 /* DAAppDelegate.m */; };
+		0775CD85155E1AA800275102 /* DAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD84155E1AA800275102 /* DAFirstViewController.m */; };
+		0775CD87155E1AA800275102 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD86155E1AA800275102 /* first.png */; };
+		0775CD89155E1AA800275102 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD88155E1AA800275102 /* first@2x.png */; };
+		0775CD8C155E1AA800275102 /* DASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD8B155E1AA800275102 /* DASecondViewController.m */; };
+		0775CD8E155E1AA800275102 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8D155E1AA800275102 /* second.png */; };
+		0775CD90155E1AA800275102 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8F155E1AA800275102 /* second@2x.png */; };
+		0775CD93155E1AA800275102 /* DAFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD91155E1AA800275102 /* DAFirstViewController.xib */; };
+		0775CD96155E1AA800275102 /* DASecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD94155E1AA800275102 /* DASecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0775CD6D155E1AA800275102 /* DungaAlerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungaAlerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0775CD71155E1AA800275102 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0775CD73155E1AA800275102 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0775CD75155E1AA800275102 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0775CD79155E1AA800275102 /* DungaAlerm-Info.plist */ = {isa = PBXFileReference; path = "DungaAlerm-Info.plist"; sourceTree = "<group>"; };
+		0775CD7B155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0775CD7D155E1AA800275102 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */ = {isa = PBXFileReference; path = "DungaAlerm-Prefix.pch"; sourceTree = "<group>"; };
+		0775CD80155E1AA800275102 /* DAAppDelegate.h */ = {isa = PBXFileReference; path = DAAppDelegate.h; sourceTree = "<group>"; };
+		0775CD81155E1AA800275102 /* DAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAAppDelegate.m; sourceTree = "<group>"; };
+		0775CD83155E1AA800275102 /* DAFirstViewController.h */ = {isa = PBXFileReference; path = DAFirstViewController.h; sourceTree = "<group>"; };
+		0775CD84155E1AA800275102 /* DAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAFirstViewController.m; sourceTree = "<group>"; };
+		0775CD86155E1AA800275102 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		0775CD88155E1AA800275102 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		0775CD8A155E1AA800275102 /* DASecondViewController.h */ = {isa = PBXFileReference; path = DASecondViewController.h; sourceTree = "<group>"; };
+		0775CD8B155E1AA800275102 /* DASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DASecondViewController.m; sourceTree = "<group>"; };
+		0775CD8D155E1AA800275102 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		0775CD8F155E1AA800275102 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		0775CD92155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DAFirstViewController.xib; sourceTree = "<group>"; };
+		0775CD95155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DASecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0775CD6A155E1AA800275102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0775CD72155E1AA800275102 /* UIKit.framework in Frameworks */,
+				0775CD74155E1AA800275102 /* Foundation.framework in Frameworks */,
+				0775CD76155E1AA800275102 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0775CD62155E1AA800275102 = {
+			isa = PBXGroup;
+			children = (
+				0775CD77155E1AA800275102 /* DungaAlerm */,
+				0775CD70155E1AA800275102 /* Frameworks */,
+				0775CD6E155E1AA800275102 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0775CD6E155E1AA800275102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0775CD6D155E1AA800275102 /* DungaAlerm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0775CD70155E1AA800275102 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0775CD71155E1AA800275102 /* UIKit.framework */,
+				0775CD73155E1AA800275102 /* Foundation.framework */,
+				0775CD75155E1AA800275102 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0775CD77155E1AA800275102 /* DungaAlerm */ = {
+			isa = PBXGroup;
+			children = (
+				0775CD80155E1AA800275102 /* DAAppDelegate.h */,
+				0775CD81155E1AA800275102 /* DAAppDelegate.m */,
+				0775CD83155E1AA800275102 /* DAFirstViewController.h */,
+				0775CD84155E1AA800275102 /* DAFirstViewController.m */,
+				0775CD86155E1AA800275102 /* first.png */,
+				0775CD88155E1AA800275102 /* first@2x.png */,
+				0775CD8A155E1AA800275102 /* DASecondViewController.h */,
+				0775CD8B155E1AA800275102 /* DASecondViewController.m */,
+				0775CD8D155E1AA800275102 /* second.png */,
+				0775CD8F155E1AA800275102 /* second@2x.png */,
+				0775CD91155E1AA800275102 /* DAFirstViewController.xib */,
+				0775CD94155E1AA800275102 /* DASecondViewController.xib */,
+				0775CD78155E1AA800275102 /* Supporting Files */,
+			);
+			path = DungaAlerm;
+			sourceTree = "<group>";
+		};
+		0775CD78155E1AA800275102 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0775CD79155E1AA800275102 /* DungaAlerm-Info.plist */,
+				0775CD7A155E1AA800275102 /* InfoPlist.strings */,
+				0775CD7D155E1AA800275102 /* main.m */,
+				0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0775CD6C155E1AA800275102 /* DungaAlerm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlerm" */;
+			buildPhases = (
+				0775CD69155E1AA800275102 /* Sources */,
+				0775CD6A155E1AA800275102 /* Frameworks */,
+				0775CD6B155E1AA800275102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DungaAlerm;
+			productName = DungaAlerm;
+			productReference = 0775CD6D155E1AA800275102 /* DungaAlerm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0775CD64155E1AA800275102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DA;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Kawaz;
+			};
+			buildConfigurationList = 0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlerm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0775CD62155E1AA800275102;
+			productRefGroup = 0775CD6E155E1AA800275102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0775CD6C155E1AA800275102 /* DungaAlerm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0775CD6B155E1AA800275102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0775CD7C155E1AA800275102 /* InfoPlist.strings in Resources */,
+				0775CD87155E1AA800275102 /* first.png in Resources */,
+				0775CD89155E1AA800275102 /* first@2x.png in Resources */,
+				0775CD8E155E1AA800275102 /* second.png in Resources */,
+				0775CD90155E1AA800275102 /* second@2x.png in Resources */,
+				0775CD93155E1AA800275102 /* DAFirstViewController.xib in Resources */,
+				0775CD96155E1AA800275102 /* DASecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0775CD69155E1AA800275102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0775CD7E155E1AA800275102 /* main.m in Sources */,
+				0775CD82155E1AA800275102 /* DAAppDelegate.m in Sources */,
+				0775CD85155E1AA800275102 /* DAFirstViewController.m in Sources */,
+				0775CD8C155E1AA800275102 /* DASecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0775CD7A155E1AA800275102 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0775CD7B155E1AA800275102 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0775CD91155E1AA800275102 /* DAFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0775CD92155E1AA800275102 /* en */,
+			);
+			name = DAFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		0775CD94155E1AA800275102 /* DASecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0775CD95155E1AA800275102 /* en */,
+			);
+			name = DASecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0775CD97155E1AA800275102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0775CD98155E1AA800275102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0775CD9A155E1AA800275102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlerm-Prefix.pch";
+				INFOPLIST_FILE = "DungaAlerm/DungaAlerm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0775CD9B155E1AA800275102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlerm-Prefix.pch";
+				INFOPLIST_FILE = "DungaAlerm/DungaAlerm-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0775CD97155E1AA800275102 /* Debug */,
+				0775CD98155E1AA800275102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0775CD9A155E1AA800275102 /* Debug */,
+				0775CD9B155E1AA800275102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0775CD64155E1AA800275102 /* Project object */;
+}
