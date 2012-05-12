@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface DAAlarmStandbyViewController : UIViewController <UIAlertViewDelegate> {
+  BOOL loaded_;
+  BOOL ended_;
   NSTimer* timer_;
   NSDate* date_;
   IBOutlet UILabel* remainLabel_;

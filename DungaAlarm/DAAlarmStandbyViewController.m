@@ -32,6 +32,8 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 - (id)initWithDate:(NSDate *)date {
   self = [self initWithNibName:@"DAAlarmStandbyView" bundle:nil];
   if (self) {
+    ended_ = NO;
+    loaded_ = NO;
     date_ = date;
     timer_ = [NSTimer scheduledTimerWithTimeInterval:1.0 
                                               target:self 
@@ -48,6 +50,15 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self updateRemainLabel];
+  HttpAsyncConnection* connection = [HttpAsyncConnection connection];
+  connection.delegate = self;
+  connection.responseSelector = @selector(onRecivedResponse:aConnection:);
+  connection.finishSelector = @selector(onSucceed:aConnection:);
+  [connection connectTo:[NSURL URLWithString:(NSString*)GET_API_URL]
+                 params:[NSDictionary dictionary]
+                 method:@"GET" 
+              userAgent:@"DungaAlarm" 
+             httpHeader:@"namaco"];
 }
 
 - (void)viewDidUnload {
@@ -74,15 +85,10 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   NSTimeInterval interval = [date_ timeIntervalSinceNow];
   [self updateRemainLabel];
   if (interval <= 0) {
-    HttpAsyncConnection* connection = [HttpAsyncConnection connection];
-    connection.delegate = self;
-    connection.responseSelector = @selector(onRecivedResponse:aConnection:);
-    connection.finishSelector = @selector(onSucceed:aConnection:);
-    [connection connectTo:[NSURL URLWithString:(NSString*)GET_API_URL]
-                   params:[NSDictionary dictionary]
-                   method:@"GET" 
-                userAgent:@"DungaAlarm" 
-               httpHeader:@"namaco"];
+    ended_ = YES;
+    if (loaded_) {
+      [player_ play];
+    }
     [timer_ invalidate];
   }
 }
@@ -93,10 +99,14 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 - (void)onSucceed:(NSURLConnection *)connection aConnection:(HttpAsyncConnection *)aConnection {
   NSError* err;
   player_ = [[AVAudioPlayer alloc] initWithData:aConnection.data error:&err];
+  player_.numberOfLoops = -1;
   if (err) {
     NSLog(@"%@", err);
   }
-  [player_ play];
+  loaded_ = YES;
+  if (ended_) {
+    [player_ play];
+  }
 }
 
 - (IBAction)pressStopButton:(id)sender {
