@@ -12,7 +12,7 @@
 @interface DAAlarmStandbyViewController : UIViewController <UIAlertViewDelegate> {
   NSTimer* timer_;
   NSDate* date_;
-  IBOutlet UIButton* okButton_;
+  IBOutlet UILabel* remainLabel_;
   AVAudioPlayer* player_;
 }
 

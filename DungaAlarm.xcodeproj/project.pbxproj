@@ -479,6 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DungaAlarm/DungaAlarm-Prefix.pch";
 				INFOPLIST_FILE = "DungaAlarm/DungaAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = DungaAlarm;
 				WRAPPER_EXTENSION = app;
 			};
@@ -490,6 +491,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DungaAlarm/DungaAlarm-Prefix.pch";
 				INFOPLIST_FILE = "DungaAlarm/DungaAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = DungaAlarm;
 				WRAPPER_EXTENSION = app;
 			};
