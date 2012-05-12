@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0775CD6C155E1AA800275102"
                BuildableName = "DungaAlerm.app"
-               BlueprintName = "DungaAlerm"
-               ReferencedContainer = "container:DungaAlerm.xcodeproj">
+               BlueprintName = "DungaAlarm"
+               ReferencedContainer = "container:DungaAlarm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0775CD6C155E1AA800275102"
             BuildableName = "DungaAlerm.app"
-            BlueprintName = "DungaAlerm"
-            ReferencedContainer = "container:DungaAlerm.xcodeproj">
+            BlueprintName = "DungaAlarm"
+            ReferencedContainer = "container:DungaAlarm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,8 +52,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0775CD6C155E1AA800275102"
             BuildableName = "DungaAlerm.app"
-            BlueprintName = "DungaAlerm"
-            ReferencedContainer = "container:DungaAlerm.xcodeproj">
+            BlueprintName = "DungaAlarm"
+            ReferencedContainer = "container:DungaAlarm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,8 +70,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0775CD6C155E1AA800275102"
             BuildableName = "DungaAlerm.app"
-            BlueprintName = "DungaAlerm"
-            ReferencedContainer = "container:DungaAlerm.xcodeproj">
+            BlueprintName = "DungaAlarm"
+            ReferencedContainer = "container:DungaAlarm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

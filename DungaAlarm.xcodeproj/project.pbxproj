@@ -18,10 +18,10 @@
 		0775CD8E155E1AA800275102 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8D155E1AA800275102 /* second.png */; };
 		0775CD90155E1AA800275102 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8F155E1AA800275102 /* second@2x.png */; };
 		0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA1155E1CAE00275102 /* DARecordViewController.m */; };
-		0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA6155E1D8300275102 /* DAAlermViewController.m */; };
+		0775CDA7155E1D8300275102 /* DAAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA6155E1D8300275102 /* DAAlarmViewController.m */; };
 		0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAC155E1DB500275102 /* DARecordEditViewController.m */; };
-		0775CDB0155E1DCA00275102 /* DAAlermStandbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */; };
-		0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlermView.xib */; };
+		0775CDB0155E1DCA00275102 /* DAAlarmStandbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlarmStandbyViewController.m */; };
+		0775CDB2155E1E6E00275102 /* DAAlarmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlarmView.xib */; };
 		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
 		0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB5155E225000275102 /* DARecordEditView.xib */; };
 		0775CDBA155E260100275102 /* DARecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDB9155E260100275102 /* DARecord.m */; };
@@ -29,7 +29,7 @@
 		0775CDBE155E314500275102 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBD155E314500275102 /* AudioToolbox.framework */; };
 		0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */; };
 		0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */; };
-		0775CDC8155E501700275102 /* DAAlerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC7155E501600275102 /* DAAlerm.m */; };
+		0775CDC8155E501700275102 /* DAAlarm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC7155E501600275102 /* DAAlarm.m */; };
 		0775CE4D155E60B600275102 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDD5155E60B600275102 /* CDataScanner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0775CE4E155E60B600275102 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDD8155E60B600275102 /* CFilteringJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0775CE4F155E60B600275102 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDDA155E60B600275102 /* CJSONDeserializer_BlocksExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -42,21 +42,21 @@
 		0775CE56155E60B600275102 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDEA155E60B600275102 /* CJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93A155E6DDA006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CEA7155E616F00275102 /* HttpAsyncConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93D155E6E1A006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF93C155E6E13006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */; };
+		078EF93F155E9049006AC099 /* DAAlarmStandbyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EF93E155E9049006AC099 /* DAAlarmStandbyView.xib */; };
 		078EF942155E9E3A006AC099 /* DARecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF941155E9E3A006AC099 /* DARecordManager.m */; };
 		078EF957155EAD35006AC099 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EF956155EAD35006AC099 /* Icon.png */; };
 		078EF95A155EAD38006AC099 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EF959155EAD38006AC099 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0775CD6D155E1AA800275102 /* DungaAlerm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungaAlerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0775CD6D155E1AA800275102 /* DungaAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungaAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0775CD71155E1AA800275102 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0775CD73155E1AA800275102 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0775CD75155E1AA800275102 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0775CD79155E1AA800275102 /* DungaAlerm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DungaAlerm-Info.plist"; sourceTree = "<group>"; };
+		0775CD79155E1AA800275102 /* DungaAlarm-Info.plist */ = {isa = PBXFileReference; path = "DungaAlarm-Info.plist"; sourceTree = "<group>"; };
 		0775CD7B155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0775CD7D155E1AA800275102 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DungaAlerm-Prefix.pch"; sourceTree = "<group>"; };
+		0775CD7F155E1AA800275102 /* DungaAlarm-Prefix.pch */ = {isa = PBXFileReference; path = "DungaAlarm-Prefix.pch"; sourceTree = "<group>"; };
 		0775CD80155E1AA800275102 /* DAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAAppDelegate.h; sourceTree = "<group>"; };
 		0775CD81155E1AA800275102 /* DAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAAppDelegate.m; sourceTree = "<group>"; };
 		0775CD86155E1AA800275102 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
@@ -65,13 +65,13 @@
 		0775CD8F155E1AA800275102 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		0775CDA0155E1CAE00275102 /* DARecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecordViewController.h; path = Record/DARecordViewController.h; sourceTree = "<group>"; };
 		0775CDA1155E1CAE00275102 /* DARecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecordViewController.m; path = Record/DARecordViewController.m; sourceTree = "<group>"; };
-		0775CDA5155E1D8300275102 /* DAAlermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermViewController.h; sourceTree = "<group>"; };
-		0775CDA6155E1D8300275102 /* DAAlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermViewController.m; sourceTree = "<group>"; };
+		0775CDA5155E1D8300275102 /* DAAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAAlarmViewController.h; sourceTree = "<group>"; };
+		0775CDA6155E1D8300275102 /* DAAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlarmViewController.m; sourceTree = "<group>"; };
 		0775CDAB155E1DB500275102 /* DARecordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARecordEditViewController.h; sourceTree = "<group>"; };
 		0775CDAC155E1DB500275102 /* DARecordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARecordEditViewController.m; sourceTree = "<group>"; };
-		0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermStandbyViewController.h; sourceTree = "<group>"; };
-		0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermStandbyViewController.m; sourceTree = "<group>"; };
-		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
+		0775CDAE155E1DCA00275102 /* DAAlarmStandbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAAlarmStandbyViewController.h; sourceTree = "<group>"; };
+		0775CDAF155E1DCA00275102 /* DAAlarmStandbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlarmStandbyViewController.m; sourceTree = "<group>"; };
+		0775CDB1155E1E6E00275102 /* DAAlarmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlarmView.xib; sourceTree = "<group>"; };
 		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
 		0775CDB5155E225000275102 /* DARecordEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordEditView.xib; sourceTree = "<group>"; };
 		0775CDB8155E260000275102 /* DARecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecord.h; path = Model/DARecord.h; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		0775CDC1155E4ABB00275102 /* DAMessageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAMessageEditViewController.h; path = Record/DAMessageEditViewController.h; sourceTree = "<group>"; };
 		0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAMessageEditViewController.m; path = Record/DAMessageEditViewController.m; sourceTree = "<group>"; };
 		0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DAMessageEditView.xib; path = Record/DAMessageEditView.xib; sourceTree = "<group>"; };
-		0775CDC6155E501600275102 /* DAAlerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlerm.h; sourceTree = "<group>"; };
-		0775CDC7155E501600275102 /* DAAlerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlerm.m; sourceTree = "<group>"; };
+		0775CDC6155E501600275102 /* DAAlarm.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAAlarm.h; sourceTree = "<group>"; };
+		0775CDC7155E501600275102 /* DAAlarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlarm.m; sourceTree = "<group>"; };
 		0775CDD4155E60B600275102 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
 		0775CDD5155E60B600275102 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
 		0775CDD7155E60B600275102 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		078EF935155E6C7D006AC099 /* KWAsyncConnectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KWAsyncConnectionDelegate.h; path = Util/KWAsyncConnectionDelegate.h; sourceTree = "<group>"; };
 		078EF93B155E6E13006AC099 /* DictionaryExtention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DictionaryExtention.h; path = Util/DictionaryExtention.h; sourceTree = "<group>"; };
 		078EF93C155E6E13006AC099 /* DictionaryExtention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DictionaryExtention.m; path = Util/DictionaryExtention.m; sourceTree = "<group>"; };
-		078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlertStandbyView.xib; sourceTree = "<group>"; };
+		078EF93E155E9049006AC099 /* DAAlarmStandbyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlarmStandbyView.xib; sourceTree = "<group>"; };
 		078EF940155E9E3A006AC099 /* DARecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecordManager.h; path = Model/DARecordManager.h; sourceTree = "<group>"; };
 		078EF941155E9E3A006AC099 /* DARecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecordManager.m; path = Model/DARecordManager.m; sourceTree = "<group>"; };
 		078EF956155EAD35006AC099 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			children = (
 				078EF959155EAD38006AC099 /* Icon@2x.png */,
 				078EF956155EAD35006AC099 /* Icon.png */,
-				0775CD77155E1AA800275102 /* DungaAlerm */,
+				0775CD77155E1AA800275102 /* DungaAlarm */,
 				0775CD70155E1AA800275102 /* Frameworks */,
 				0775CD6E155E1AA800275102 /* Products */,
 			);
@@ -146,7 +146,7 @@
 		0775CD6E155E1AA800275102 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0775CD6D155E1AA800275102 /* DungaAlerm.app */,
+				0775CD6D155E1AA800275102 /* DungaAlarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0775CD77155E1AA800275102 /* DungaAlerm */ = {
+		0775CD77155E1AA800275102 /* DungaAlarm */ = {
 			isa = PBXGroup;
 			children = (
 				0775CEA5155E611B00275102 /* Util */,
@@ -179,16 +179,17 @@
 				0775CDCF155E60B600275102 /* TouchJSON */,
 				0775CD78155E1AA800275102 /* Supporting Files */,
 			);
+			name = DungaAlarm;
 			path = DungaAlerm;
 			sourceTree = "<group>";
 		};
 		0775CD78155E1AA800275102 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0775CD79155E1AA800275102 /* DungaAlerm-Info.plist */,
+				0775CD79155E1AA800275102 /* DungaAlarm-Info.plist */,
 				0775CD7A155E1AA800275102 /* InfoPlist.strings */,
 				0775CD7D155E1AA800275102 /* main.m */,
-				0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */,
+				0775CD7F155E1AA800275102 /* DungaAlarm-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,12 +213,12 @@
 		0775CDA4155E1CBF00275102 /* Alerm */ = {
 			isa = PBXGroup;
 			children = (
-				0775CDA5155E1D8300275102 /* DAAlermViewController.h */,
-				0775CDA6155E1D8300275102 /* DAAlermViewController.m */,
-				0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */,
-				0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */,
-				0775CDB1155E1E6E00275102 /* DAAlermView.xib */,
-				078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */,
+				0775CDA5155E1D8300275102 /* DAAlarmViewController.h */,
+				0775CDA6155E1D8300275102 /* DAAlarmViewController.m */,
+				0775CDAE155E1DCA00275102 /* DAAlarmStandbyViewController.h */,
+				0775CDAF155E1DCA00275102 /* DAAlarmStandbyViewController.m */,
+				0775CDB1155E1E6E00275102 /* DAAlarmView.xib */,
+				078EF93E155E9049006AC099 /* DAAlarmStandbyView.xib */,
 			);
 			name = Alerm;
 			sourceTree = "<group>";
@@ -227,8 +228,8 @@
 			children = (
 				0775CDB8155E260000275102 /* DARecord.h */,
 				0775CDB9155E260100275102 /* DARecord.m */,
-				0775CDC6155E501600275102 /* DAAlerm.h */,
-				0775CDC7155E501600275102 /* DAAlerm.m */,
+				0775CDC6155E501600275102 /* DAAlarm.h */,
+				0775CDC7155E501600275102 /* DAAlarm.m */,
 				078EF940155E9E3A006AC099 /* DARecordManager.h */,
 				078EF941155E9E3A006AC099 /* DARecordManager.m */,
 			);
@@ -310,9 +311,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0775CD6C155E1AA800275102 /* DungaAlerm */ = {
+		0775CD6C155E1AA800275102 /* DungaAlarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlerm" */;
+			buildConfigurationList = 0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlarm" */;
 			buildPhases = (
 				0775CD69155E1AA800275102 /* Sources */,
 				0775CD6A155E1AA800275102 /* Frameworks */,
@@ -322,9 +323,9 @@
 			);
 			dependencies = (
 			);
-			name = DungaAlerm;
+			name = DungaAlarm;
 			productName = DungaAlerm;
-			productReference = 0775CD6D155E1AA800275102 /* DungaAlerm.app */;
+			productReference = 0775CD6D155E1AA800275102 /* DungaAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +338,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Kawaz;
 			};
-			buildConfigurationList = 0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlerm" */;
+			buildConfigurationList = 0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlarm" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -349,7 +350,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0775CD6C155E1AA800275102 /* DungaAlerm */,
+				0775CD6C155E1AA800275102 /* DungaAlarm */,
 			);
 		};
 /* End PBXProject section */
@@ -364,11 +365,11 @@
 				0775CD89155E1AA800275102 /* first@2x.png in Resources */,
 				0775CD8E155E1AA800275102 /* second.png in Resources */,
 				0775CD90155E1AA800275102 /* second@2x.png in Resources */,
-				0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */,
+				0775CDB2155E1E6E00275102 /* DAAlarmView.xib in Resources */,
 				0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */,
 				0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */,
 				0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */,
-				078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */,
+				078EF93F155E9049006AC099 /* DAAlarmStandbyView.xib in Resources */,
 				078EF957155EAD35006AC099 /* Icon.png in Resources */,
 				078EF95A155EAD38006AC099 /* Icon@2x.png in Resources */,
 			);
@@ -386,12 +387,12 @@
 				0775CD7E155E1AA800275102 /* main.m in Sources */,
 				0775CD82155E1AA800275102 /* DAAppDelegate.m in Sources */,
 				0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */,
-				0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */,
+				0775CDA7155E1D8300275102 /* DAAlarmViewController.m in Sources */,
 				0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */,
-				0775CDB0155E1DCA00275102 /* DAAlermStandbyViewController.m in Sources */,
+				0775CDB0155E1DCA00275102 /* DAAlarmStandbyViewController.m in Sources */,
 				0775CDBA155E260100275102 /* DARecord.m in Sources */,
 				0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */,
-				0775CDC8155E501700275102 /* DAAlerm.m in Sources */,
+				0775CDC8155E501700275102 /* DAAlarm.m in Sources */,
 				0775CE4D155E60B600275102 /* CDataScanner.m in Sources */,
 				0775CE4E155E60B600275102 /* CFilteringJSONSerializer.m in Sources */,
 				0775CE4F155E60B600275102 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
@@ -469,9 +470,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlerm-Prefix.pch";
-				INFOPLIST_FILE = "DungaAlerm/DungaAlerm-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlarm-Prefix.pch";
+				INFOPLIST_FILE = "DungaAlerm/DungaAlarm-Info.plist";
+				PRODUCT_NAME = DungaAlarm;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -480,9 +481,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlerm-Prefix.pch";
-				INFOPLIST_FILE = "DungaAlerm/DungaAlerm-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "DungaAlerm/DungaAlarm-Prefix.pch";
+				INFOPLIST_FILE = "DungaAlerm/DungaAlarm-Info.plist";
+				PRODUCT_NAME = DungaAlarm;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -490,7 +491,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlerm" */ = {
+		0775CD67155E1AA800275102 /* Build configuration list for PBXProject "DungaAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0775CD97155E1AA800275102 /* Debug */,
@@ -499,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlerm" */ = {
+		0775CD99155E1AA800275102 /* Build configuration list for PBXNativeTarget "DungaAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0775CD9A155E1AA800275102 /* Debug */,

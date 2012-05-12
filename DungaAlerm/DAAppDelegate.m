@@ -1,6 +1,6 @@
 //
 //  DAAppDelegate.m
-//  DungaAlerm
+//  DungaAlarm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "DAAppDelegate.h"
 
-#import "DAAlermViewController.h"
+#import "DAAlarmViewController.h"
 
 #import "DARecordViewController.h"
 
@@ -21,7 +21,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-  UIViewController *viewController1 = [[DAAlermViewController alloc] initWithNibName:@"DAAlermView" bundle:nil];
+  UIViewController *viewController1 = [[DAAlarmViewController alloc] initWithNibName:@"DAAlarmView" bundle:nil];
   UIViewController *viewController2 = [[DARecordViewController alloc] initWithNibName:@"DARecordView" bundle:nil];
   self.tabBarController = [[UITabBarController alloc] init];
   self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];

@@ -1,20 +1,20 @@
 //
-//  DAAlermViewController.m
-//  DungaAlerm
+//  DAAlarmViewController.m
+//  DungaAlarm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "DAAlermViewController.h"
-#import "DAAlermStandbyViewController.h"
-#import "DAAlerm.h"
+#import "DAAlarmViewController.h"
+#import "DAAlarmStandbyViewController.h"
+#import "DAAlarm.h"
 #import "HttpAsyncConnection.h"
 
-@interface DAAlermViewController ()
+@interface DAAlarmViewController ()
 @end
 
-@implementation DAAlermViewController
+@implementation DAAlarmViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,7 +45,7 @@
   if ([date timeIntervalSinceNow] <= 0) {
     date = [NSDate dateWithTimeInterval:60 * 60 * 24 sinceDate:date];
   }
-  DAAlermStandbyViewController* controller = [[DAAlermStandbyViewController alloc] initWithDate:date];
+  DAAlarmStandbyViewController* controller = [[DAAlarmStandbyViewController alloc] initWithDate:date];
   [self presentModalViewController:controller animated:YES];
 }
 

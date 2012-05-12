@@ -1,21 +1,21 @@
 //
-//  DAAlermStandbyViewController.m
-//  DungaAlerm
+//  DAAlarmStandbyViewController.m
+//  DungaAlarm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "DAAlermStandbyViewController.h"
+#import "DAAlarmStandbyViewController.h"
 #import "HttpAsyncConnection.h"
 
-@interface DAAlermStandbyViewController ()
+@interface DAAlarmStandbyViewController ()
 - (void)update:(NSTimer*)timer;
 - (void)onRecivedResponse:(NSURLResponse*)res aConnection:(HttpAsyncConnection*)aConnection;
 - (void)onSucceed:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
 @end
 
-@implementation DAAlermStandbyViewController
+@implementation DAAlarmStandbyViewController
 const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,7 +28,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 }
 
 - (id)initWithDate:(NSDate *)date {
-  self = [self initWithNibName:@"DAAlertStandbyView" bundle:nil];
+  self = [self initWithNibName:@"DAAlarmStandbyView" bundle:nil];
   if (self) {
     date_ = date;
     timer_ = [NSTimer scheduledTimerWithTimeInterval:1.0 
@@ -67,7 +67,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
     [connection connectTo:[NSURL URLWithString:(NSString*)GET_API_URL]
                    params:[NSDictionary dictionary]
                    method:@"GET" 
-                userAgent:@"DungaAlerm" 
+                userAgent:@"DungaAlarm" 
                httpHeader:@"namaco"];
     [timer_ invalidate];
   }

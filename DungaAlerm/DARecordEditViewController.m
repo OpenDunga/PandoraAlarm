@@ -1,6 +1,6 @@
 //
 //  DARecordEditViewController.m
-//  DungaAlerm
+//  DungaAlarm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
@@ -164,7 +164,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   connection.delegate = self;
   connection.finishSelector = @selector(onSucceedCreation:aConnection:);
   NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
-  [connection connectTo:apiURL params:[recode dump] method:@"POST" userAgent:@"DungaAlerm" httpHeader:@"namaco"];
+  [connection connectTo:apiURL params:[recode dump] method:@"POST" userAgent:@"DungaAlarm" httpHeader:@"namaco"];
 }
 
 - (IBAction)pressCancelButton:(id)sender {

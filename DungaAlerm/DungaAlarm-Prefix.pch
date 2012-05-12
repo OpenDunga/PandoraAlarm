@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'DungaAlerm' target in the 'DungaAlerm' project
+// Prefix header for all source files of the 'DungaAlarm' target in the 'DungaAlarm' project
 //
 
 #import <Availability.h>

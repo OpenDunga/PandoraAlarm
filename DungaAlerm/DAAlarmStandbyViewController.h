@@ -1,6 +1,6 @@
 //
-//  DAAlermStandbyViewController.h
-//  DungaAlerm
+//  DAAlarmStandbyViewController.h
+//  DungaAlarm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface DAAlermStandbyViewController : UIViewController {
+@interface DAAlarmStandbyViewController : UIViewController {
   NSTimer* timer_;
   NSDate* date_;
   IBOutlet UIButton* okButton_;
