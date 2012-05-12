@@ -43,6 +43,7 @@
 		078EF93A155E6DDA006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CEA7155E616F00275102 /* HttpAsyncConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93D155E6E1A006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF93C155E6E13006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */; };
+		078EF942155E9E3A006AC099 /* DARecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF941155E9E3A006AC099 /* DARecordManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +67,7 @@
 		0775CDA6155E1D8300275102 /* DAAlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermViewController.m; sourceTree = "<group>"; };
 		0775CDAB155E1DB500275102 /* DARecordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARecordEditViewController.h; sourceTree = "<group>"; };
 		0775CDAC155E1DB500275102 /* DARecordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARecordEditViewController.m; sourceTree = "<group>"; };
-		0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAAlermStandbyViewController.h; sourceTree = "<group>"; };
+		0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermStandbyViewController.h; sourceTree = "<group>"; };
 		0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermStandbyViewController.m; sourceTree = "<group>"; };
 		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
 		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
@@ -107,6 +108,8 @@
 		078EF93B155E6E13006AC099 /* DictionaryExtention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DictionaryExtention.h; path = Util/DictionaryExtention.h; sourceTree = "<group>"; };
 		078EF93C155E6E13006AC099 /* DictionaryExtention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DictionaryExtention.m; path = Util/DictionaryExtention.m; sourceTree = "<group>"; };
 		078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlertStandbyView.xib; sourceTree = "<group>"; };
+		078EF940155E9E3A006AC099 /* DARecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecordManager.h; path = Model/DARecordManager.h; sourceTree = "<group>"; };
+		078EF941155E9E3A006AC099 /* DARecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecordManager.m; path = Model/DARecordManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,8 @@
 				0775CDB9155E260100275102 /* DARecord.m */,
 				0775CDC6155E501600275102 /* DAAlerm.h */,
 				0775CDC7155E501600275102 /* DAAlerm.m */,
+				078EF940155E9E3A006AC099 /* DARecordManager.h */,
+				078EF941155E9E3A006AC099 /* DARecordManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				0775CE54155E60B600275102 /* CJSONDeserializer.m in Sources */,
 				0775CE55155E60B600275102 /* CJSONScanner.m in Sources */,
 				0775CE56155E60B600275102 /* CJSONSerializer.m in Sources */,
+				078EF942155E9E3A006AC099 /* DARecordManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
