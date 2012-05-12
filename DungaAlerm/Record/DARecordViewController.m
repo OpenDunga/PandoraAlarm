@@ -60,7 +60,7 @@
 }
 
 - (IBAction)pressAddButton:(id)sender {
-  DARecordEditViewController* editViewController = [[DARecordEditViewController alloc] initWithNibName:@"DARecordEditView" bundle:nil];
+  DARecordEditViewController* editViewController = [[DARecordEditViewController alloc] initWithRecord:[[DARecord alloc] init]];
   UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:editViewController];
   [self presentModalViewController:navigationController animated:YES];
 }

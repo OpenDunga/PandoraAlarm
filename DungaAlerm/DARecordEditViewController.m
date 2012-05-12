@@ -7,6 +7,7 @@
 //
 
 #import "DARecordEditViewController.h"
+#import "DAMessageEditViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface DARecordEditViewController ()
@@ -20,7 +21,7 @@
 @synthesize recode;
 
 - (id)initWithRecord:(DARecord *)rec {
-  self = [self initWithNibName:@"" bundle:nil];
+  self = [self initWithNibName:@"DARecordEditView" bundle:nil];
   if (self) {
     recode = rec;
   }
@@ -173,7 +174,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   if (indexPath.section == 1) {
-    UIViewController* controller = [[UIViewController alloc] init];
+    DAMessageEditViewController* controller = [[DAMessageEditViewController alloc] initWithRecord:self.recode];
+    [self.navigationController pushViewController:controller animated:YES];
   }
 }
 

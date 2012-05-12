@@ -27,6 +27,8 @@
 		0775CDBA155E260100275102 /* DARecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDB9155E260100275102 /* DARecord.m */; };
 		0775CDBC155E313E00275102 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBB155E313D00275102 /* AVFoundation.framework */; };
 		0775CDBE155E314500275102 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBD155E314500275102 /* AudioToolbox.framework */; };
+		0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */; };
+		0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,9 @@
 		0775CDB9155E260100275102 /* DARecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecord.m; path = Model/DARecord.m; sourceTree = "<group>"; };
 		0775CDBB155E313D00275102 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0775CDBD155E314500275102 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0775CDC1155E4ABB00275102 /* DAMessageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAMessageEditViewController.h; path = Record/DAMessageEditViewController.h; sourceTree = "<group>"; };
+		0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAMessageEditViewController.m; path = Record/DAMessageEditViewController.m; sourceTree = "<group>"; };
+		0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DAMessageEditView.xib; path = Record/DAMessageEditView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,9 @@
 				0775CDAC155E1DB500275102 /* DARecordEditViewController.m */,
 				0775CDB3155E1E7B00275102 /* DARecordView.xib */,
 				0775CDB5155E225000275102 /* DARecordEditView.xib */,
+				0775CDC1155E4ABB00275102 /* DAMessageEditViewController.h */,
+				0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */,
+				0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -228,6 +236,7 @@
 				0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */,
 				0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */,
 				0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */,
+				0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */,
 				0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */,
 				0775CDBA155E260100275102 /* DARecord.m in Sources */,
+				0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
