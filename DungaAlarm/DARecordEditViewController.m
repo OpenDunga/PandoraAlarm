@@ -27,6 +27,7 @@ const NSString* API_URL = @"http://phptest.kawaz.org/save.php";
 @implementation DARecordEditViewController
 @synthesize recode;
 const float MAX_MEGABYTE = 1;
+const NSString* LAST_NAME_KEY = @"lastUsername";
 
 - (id)initWithRecord:(DARecord *)rec {
   self = [self initWithNibName:@"DARecordEditView" bundle:nil];
@@ -138,6 +139,11 @@ const float MAX_MEGABYTE = 1;
       field.textAlignment = UITextAlignmentRight;
       field.returnKeyType = UIReturnKeyDone;
       field.placeholder = @"あなたの名前";
+      NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+      NSString* lastName = [ud objectForKey:(NSString*)LAST_NAME_KEY];
+      if (lastName) {
+        field.text = lastName;
+      }
       [field addTarget:self 
                 action:@selector(changeLabelField:) 
       forControlEvents:UIControlEventEditingChanged];
@@ -196,6 +202,8 @@ const float MAX_MEGABYTE = 1;
                 userAgent:@"DungaAlarm" 
                httpHeader:@"namaco"];
   }
+  NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+  [ud setObject:self.recode.username forKey:(NSString*)LAST_NAME_KEY];
 }
 
 - (IBAction)pressCancelButton:(id)sender {
