@@ -42,7 +42,7 @@ const NSString* LAST_NAME_KEY = @"lastUsername";
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
     recording_ = NO;
-    self.title = @"メッセージの追加";
+    self.title = @"メッセージの投稿";
     recode = [[DARecord alloc] init];
     NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                              NSUserDomainMask,YES);

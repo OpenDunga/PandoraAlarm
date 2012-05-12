@@ -26,7 +26,7 @@
   viewController1.tabBarItem = item1;
   
   UIViewController *viewController2 = [[DARecordViewController alloc] initWithNibName:@"DARecordView" bundle:nil];
-  UITabBarItem* item2 = [[UITabBarItem alloc] initWithTitle:@"録音" image:[UIImage imageNamed:@"tab_rec.png"] tag:1];
+  UITabBarItem* item2 = [[UITabBarItem alloc] initWithTitle:@"メッセージの投稿" image:[UIImage imageNamed:@"tab_rec.png"] tag:1];
   viewController2.tabBarItem = item2;
   
   self.tabBarController = [[UITabBarController alloc] init];
