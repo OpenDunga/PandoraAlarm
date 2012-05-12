@@ -60,6 +60,7 @@
   if (cell == nil) {
     DARecord* record = [manager_.records objectAtIndex:indexPath.row];
     cell = [[DARecordTableCell alloc] initWithRecord:record];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
   }
   return cell;  
 }
