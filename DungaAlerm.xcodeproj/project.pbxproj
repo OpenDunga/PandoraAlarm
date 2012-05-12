@@ -44,6 +44,8 @@
 		078EF93D155E6E1A006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF93C155E6E13006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */; };
 		078EF942155E9E3A006AC099 /* DARecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF941155E9E3A006AC099 /* DARecordManager.m */; };
+		078EF957155EAD35006AC099 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EF956155EAD35006AC099 /* Icon.png */; };
+		078EF95A155EAD38006AC099 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EF959155EAD38006AC099 /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlertStandbyView.xib; sourceTree = "<group>"; };
 		078EF940155E9E3A006AC099 /* DARecordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecordManager.h; path = Model/DARecordManager.h; sourceTree = "<group>"; };
 		078EF941155E9E3A006AC099 /* DARecordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecordManager.m; path = Model/DARecordManager.m; sourceTree = "<group>"; };
+		078EF956155EAD35006AC099 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		078EF959155EAD38006AC099 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 		0775CD62155E1AA800275102 = {
 			isa = PBXGroup;
 			children = (
+				078EF959155EAD38006AC099 /* Icon@2x.png */,
+				078EF956155EAD35006AC099 /* Icon.png */,
 				0775CD77155E1AA800275102 /* DungaAlerm */,
 				0775CD70155E1AA800275102 /* Frameworks */,
 				0775CD6E155E1AA800275102 /* Products */,
@@ -363,6 +369,8 @@
 				0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */,
 				0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */,
 				078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */,
+				078EF957155EAD35006AC099 /* Icon.png in Resources */,
+				078EF95A155EAD38006AC099 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
