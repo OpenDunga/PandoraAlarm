@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071C8F2D155EFDDB00970148 /* DARecordTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C8F2C155EFDDB00970148 /* DARecordTableCell.m */; };
 		0775CD72155E1AA800275102 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD71155E1AA800275102 /* UIKit.framework */; };
 		0775CD74155E1AA800275102 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD73155E1AA800275102 /* Foundation.framework */; };
 		0775CD76155E1AA800275102 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CD75155E1AA800275102 /* CoreGraphics.framework */; };
@@ -64,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071C8F2B155EFDDB00970148 /* DARecordTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARecordTableCell.h; sourceTree = "<group>"; };
+		071C8F2C155EFDDB00970148 /* DARecordTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARecordTableCell.m; sourceTree = "<group>"; };
 		0775CD6D155E1AA800275102 /* DungaAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungaAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0775CD71155E1AA800275102 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0775CD73155E1AA800275102 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -293,6 +296,8 @@
 				078EFB8B155EB42C006AC099 /* DAMessageEditViewController.m */,
 				078EFB8C155EB42C006AC099 /* DARecordViewController.h */,
 				078EFB8D155EB42C006AC099 /* DARecordViewController.m */,
+				071C8F2B155EFDDB00970148 /* DARecordTableCell.h */,
+				071C8F2C155EFDDB00970148 /* DARecordTableCell.m */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				078EFBAE155EB42C006AC099 /* DictionaryExtention.m in Sources */,
 				078EFBAF155EB42C006AC099 /* HttpAsyncConnection.m in Sources */,
 				078EFBE2155EE0DE006AC099 /* UIDatePicker_Extension.m in Sources */,
+				071C8F2D155EFDDB00970148 /* DARecordTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

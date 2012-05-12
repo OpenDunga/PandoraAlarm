@@ -8,9 +8,9 @@
 
 #import "DARecordViewController.h"
 #import "DARecordEditViewController.h"
+#import "DARecordTableCell.h"
 
 @interface DARecordViewController ()
-
 @end
 
 @implementation DARecordViewController
@@ -58,9 +58,8 @@
   NSString *CellIdentifier = [NSString stringWithFormat:@"Cell:%d_%d", indexPath.section, indexPath.row];
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     DARecord* record = [manager_.records objectAtIndex:indexPath.row];
-    cell.textLabel.text = record.message;
+    cell = [[DARecordTableCell alloc] initWithRecord:record];
   }
   return cell;  
 }
