@@ -12,6 +12,7 @@
 
 @interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, UITextFieldDelegate> {
   BOOL recording_;
+  UILabel* recordingLabel_;
   UIButton* recordButton_;
   AVAudioRecorder* recorder_;
   IBOutlet UINavigationItem* cancel_;

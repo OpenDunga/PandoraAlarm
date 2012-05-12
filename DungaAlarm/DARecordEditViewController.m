@@ -94,6 +94,16 @@ const float MAX_MEGABYTE = 1;
   [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
   [tableView_ addSubview:recordButton_];
   tableView_.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"normal_bg.png"]];
+  
+  recordingLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(60, 140, 200, 40)];
+  recordingLabel_.text = @"Now Recording";
+  recordingLabel_.textColor = [UIColor whiteColor];
+  recordingLabel_.backgroundColor = [UIColor clearColor];
+  recordingLabel_.textAlignment = UITextAlignmentCenter;
+  recordingLabel_.font = [UIFont systemFontOfSize:24];
+  recordingLabel_.hidden = YES;
+  [self.view addSubview:recordingLabel_];
+  
 }
 
 - (void)viewDidUnload {
@@ -198,6 +208,7 @@ const float MAX_MEGABYTE = 1;
   [recordButton_ addTarget:self action:@selector(pressStopButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
   [recorder_ prepareToRecord];
+  recordingLabel_.hidden = NO;
 }
 
 - (void)pressStopButton:(id)sender {
@@ -205,6 +216,7 @@ const float MAX_MEGABYTE = 1;
   [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
   [recorder_ stop];
+  recordingLabel_.hidden = YES;
 }
 
 - (void)changeLabelField:(id)sender {
