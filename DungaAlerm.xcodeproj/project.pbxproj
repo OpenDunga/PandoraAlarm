@@ -24,6 +24,7 @@
 		0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlermView.xib */; };
 		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
 		0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB5155E225000275102 /* DARecordEditView.xib */; };
+		0775CDBA155E260100275102 /* DARecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDB9155E260100275102 /* DARecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
 		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
 		0775CDB5155E225000275102 /* DARecordEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordEditView.xib; sourceTree = "<group>"; };
+		0775CDB8155E260000275102 /* DARecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecord.h; path = Model/DARecord.h; sourceTree = "<group>"; };
+		0775CDB9155E260100275102 /* DARecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecord.m; path = Model/DARecord.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		0775CD77155E1AA800275102 /* DungaAlerm */ = {
 			isa = PBXGroup;
 			children = (
+				0775CDB7155E242D00275102 /* Model */,
 				0775CDA4155E1CBF00275102 /* Alerm */,
 				0775CDA3155E1CB400275102 /* Record */,
 				0775CD80155E1AA800275102 /* DAAppDelegate.h */,
@@ -145,6 +149,15 @@
 				0775CDB1155E1E6E00275102 /* DAAlermView.xib */,
 			);
 			name = Alerm;
+			sourceTree = "<group>";
+		};
+		0775CDB7155E242D00275102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0775CDB8155E260000275102 /* DARecord.h */,
+				0775CDB9155E260100275102 /* DARecord.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +236,7 @@
 				0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */,
 				0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */,
 				0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */,
+				0775CDBA155E260100275102 /* DARecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
