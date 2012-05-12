@@ -26,6 +26,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 
 @implementation DARecordEditViewController
 @synthesize recode;
+const float MAX_MEGABYTE = 1;
 
 - (id)initWithRecord:(DARecord *)rec {
   self = [self initWithNibName:@"DARecordEditView" bundle:nil];
@@ -39,6 +40,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
+    recording_ = NO;
     self.title = @"メッセージの追加";
     recode = [[DARecord alloc] init];
     NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
@@ -148,33 +150,58 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 }
 
 - (IBAction)pressSaveButton:(id)sender {
-  NSURL* url = recorder_.url;
-  player_ = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-  player_.delegate = self;
-  player_.volume = 1.0;
-  //[player_ play];
+  if (recording_) return;
   NSData* rawSound = [NSData dataWithContentsOfURL:recorder_.url];
   recode.rawSound = rawSound;
-  HttpAsyncConnection* connection = [HttpAsyncConnection connection];
-  connection.delegate = self;
-  connection.finishSelector = @selector(onSucceedCreation:aConnection:);
-  NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
-  [connection connectTo:apiURL params:[recode dump] method:@"POST" userAgent:@"DungaAlarm" httpHeader:@"namaco"];
+  BOOL error = NO;
+  float size = (float)[self.recode.rawSound length] / (float)pow(2, 20);
+  NSString* errorText = @"";
+  if ([self.recode.rawSound length] == 0) {
+    error = YES;
+    errorText = @"音声が録音されていません";
+  } else if ([self.recode.username length] == 0) {
+    error = YES;
+    errorText = @"名前が設定されていません";
+  } else if ([self.recode.message length] == 0) {
+    error = YES;
+    errorText = @"メッセージが設定されていません";
+  } else if (size >= MAX_MEGABYTE) {
+    error = YES;
+    errorText = @"音声の容量が大きすぎます";
+  }
+  if (error) {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"投稿エラー" 
+                                                    message:errorText 
+                                                   delegate:nil 
+                                          cancelButtonTitle:@"戻る" 
+                                          otherButtonTitles:nil];
+    [alert show];
+  } else {
+    HttpAsyncConnection* connection = [HttpAsyncConnection connection];
+    connection.delegate = self;
+    connection.finishSelector = @selector(onSucceedCreation:aConnection:);
+    NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
+    [connection connectTo:apiURL params:[recode dump] 
+                   method:@"POST" 
+                userAgent:@"DungaAlarm" 
+               httpHeader:@"namaco"];
+  }
 }
 
 - (IBAction)pressCancelButton:(id)sender {
+  if (recording_) return;
   [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)pressRecordButton:(id)sender {
+  recording_ = YES;
   [recordButton_ addTarget:self action:@selector(pressStopButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
   [recorder_ prepareToRecord];
-  BOOL result = [recorder_ record];
-  NSLog(@"%d", result);
 }
 
 - (void)pressStopButton:(id)sender {
+  recording_ = NO;
   [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
   [recorder_ stop];
@@ -186,7 +213,6 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 }
 
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
-  NSLog(@"録音しますた");
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -217,6 +243,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   self.recode.createdAt = createdAt;
   DARecordManager* manager = [DARecordManager sharedManager];
   [manager saveRecord:self.recode];
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
