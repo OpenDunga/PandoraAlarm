@@ -12,6 +12,7 @@
 @synthesize label;
 @synthesize message;
 @synthesize rawAudio;
+@synthesize audioURL;
 
 - (id)init {
   self = [super init];

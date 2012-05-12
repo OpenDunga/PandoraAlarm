@@ -13,5 +13,6 @@
 @property(readwrite, strong) NSString* label;
 @property(readwrite, strong) NSString* message;
 @property(readwrite, strong) NSData* rawAudio;
+@property(readwrite, strong) NSURL* audioURL;
 
 @end

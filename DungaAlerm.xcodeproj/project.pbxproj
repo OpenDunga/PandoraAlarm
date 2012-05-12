@@ -25,6 +25,8 @@
 		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
 		0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB5155E225000275102 /* DARecordEditView.xib */; };
 		0775CDBA155E260100275102 /* DARecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDB9155E260100275102 /* DARecord.m */; };
+		0775CDBC155E313E00275102 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBB155E313D00275102 /* AVFoundation.framework */; };
+		0775CDBE155E314500275102 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBD155E314500275102 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		0775CDB5155E225000275102 /* DARecordEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordEditView.xib; sourceTree = "<group>"; };
 		0775CDB8155E260000275102 /* DARecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecord.h; path = Model/DARecord.h; sourceTree = "<group>"; };
 		0775CDB9155E260100275102 /* DARecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecord.m; path = Model/DARecord.m; sourceTree = "<group>"; };
+		0775CDBB155E313D00275102 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0775CDBD155E314500275102 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0775CDBE155E314500275102 /* AudioToolbox.framework in Frameworks */,
+				0775CDBC155E313E00275102 /* AVFoundation.framework in Frameworks */,
 				0775CD72155E1AA800275102 /* UIKit.framework in Frameworks */,
 				0775CD74155E1AA800275102 /* Foundation.framework in Frameworks */,
 				0775CD76155E1AA800275102 /* CoreGraphics.framework in Frameworks */,
@@ -74,6 +80,8 @@
 		0775CD62155E1AA800275102 = {
 			isa = PBXGroup;
 			children = (
+				0775CDBD155E314500275102 /* AudioToolbox.framework */,
+				0775CDBB155E313D00275102 /* AVFoundation.framework */,
 				0775CD77155E1AA800275102 /* DungaAlerm */,
 				0775CD70155E1AA800275102 /* Frameworks */,
 				0775CD6E155E1AA800275102 /* Products */,
