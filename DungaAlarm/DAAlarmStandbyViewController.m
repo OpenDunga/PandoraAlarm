@@ -8,6 +8,8 @@
 
 #import "DAAlarmStandbyViewController.h"
 #import "HttpAsyncConnection.h"
+#import "DARecordManager.h"
+#import "DictionaryExtention.h"
 
 @interface DAAlarmStandbyViewController ()
 - (void)update:(NSTimer*)timer;
@@ -19,7 +21,7 @@
 @end
 
 @implementation DAAlarmStandbyViewController
-const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.php";
+const NSString* GET_API_URL = @"http://phptest.kawaz.org/fetch.php";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +57,9 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.p
   connection.delegate = self;
   connection.responseSelector = @selector(onRecivedResponse:aConnection:);
   connection.finishSelector = @selector(onSucceed:aConnection:);
-  [connection connectTo:[NSURL URLWithString:(NSString*)GET_API_URL]
+  DARecordManager* manager = [DARecordManager sharedManager];
+  NSString* query = [manager queryFromPrimaryKeys];
+  [connection connectTo:[NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", (NSString*)GET_API_URL, query]]
                  params:[NSDictionary dictionary]
                  method:@"GET" 
               userAgent:@"DungaAlarm" 
@@ -95,6 +99,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.p
 }
 
 - (void)onRecivedResponse:(NSURLResponse *)res aConnection:(HttpAsyncConnection *)aConnection {
+  NSLog(@"%@", aConnection);
 }
 
 - (void)onSucceed:(NSURLConnection *)connection aConnection:(HttpAsyncConnection *)aConnection {

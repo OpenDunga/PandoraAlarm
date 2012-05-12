@@ -58,4 +58,23 @@ const NSString* RECORD_KEY = @"records";
   return [self.records count];
 }
 
+- (NSArray*)primaryKeys {
+  NSMutableArray* array = [NSMutableArray array];
+  for (DARecord* record in self.records) {
+    NSNumber* number = [NSNumber numberWithInt:record.primaryKey];
+    [array addObject:number];
+  }
+  return array;
+}
+
+- (NSString*)queryFromPrimaryKeys {
+  NSMutableArray* queries = [NSMutableArray array];
+  for (NSNumber* number in self.primaryKeys) {
+    NSString* query = [NSString stringWithFormat:@"owns[]=%d", [number intValue]];
+    [queries addObject:query];
+  }
+  NSString* query = [queries componentsJoinedByString:@"&"];
+  return query;
+}
+
 @end

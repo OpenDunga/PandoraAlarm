@@ -22,7 +22,7 @@
 - (void)onSucceedCreation:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
 @end
 
-const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
+const NSString* API_URL = @"http://phptest.kawaz.org/save.php";
 
 @implementation DARecordEditViewController
 @synthesize recode;

@@ -19,5 +19,7 @@
 - (NSArray*)loadRecordFromStorage;
 - (void)saveRecord:(DARecord*)record;
 - (NSUInteger)count;
+- (NSArray*)primaryKeys;
+- (NSString*)queryFromPrimaryKeys;
 
 @end
