@@ -14,6 +14,7 @@
   UIButton* recordButton_;
   AVAudioRecorder* recorder_;
   AVAudioPlayer* player_;
+  IBOutlet UINavigationItem* cancel_;
 }
 
 @property(readwrite, strong) DARecord* recode;

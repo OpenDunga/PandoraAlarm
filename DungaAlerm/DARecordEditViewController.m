@@ -29,60 +29,66 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-      recode = [[DARecord alloc] init];
-      NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                               NSUserDomainMask,YES);
-      NSString *documentDir = [filePaths objectAtIndex:0];    
-      NSString *path = [documentDir stringByAppendingPathComponent:@"recording.caf"];
-      NSURL *recordingURL = [NSURL fileURLWithPath:path];
-
-      NSError* error = nil;
-      NSDictionary* settings = [NSDictionary dictionaryWithObjectsAndKeys:
-                                      [NSNumber numberWithUnsignedInt:kAudioFormatLinearPCM], AVFormatIDKey,
-                                      [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
-                                      nil];
-      recorder_ = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&error];
-      recorder_.delegate = self;
-      AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-      NSError *err = nil;
-      // 使用している機種が録音に対応しているか
-      if ([audioSession inputIsAvailable]) {
-        [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
-      }
-      if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-      }
-      // 録音機能をアクティブにする
-      [audioSession setActive:YES error:&err];
-      if(err){
-        NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
-      }
-      // 音量をでかくするけどなぞ
-      // http://stackoverflow.com/questions/5662297/how-to-record-and-play-sound-in-iphone-app
-      UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;                
-      AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,          
-                               sizeof (audioRouteOverride),&audioRouteOverride);
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    self.title = @"メッセージの追加";
+    recode = [[DARecord alloc] init];
+    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                             NSUserDomainMask,YES);
+    NSString *documentDir = [filePaths objectAtIndex:0];    
+    NSString *path = [documentDir stringByAppendingPathComponent:@"recording.caf"];
+    NSURL *recordingURL = [NSURL fileURLWithPath:path];
+    
+    NSError* error = nil;
+    NSDictionary* settings = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [NSNumber numberWithUnsignedInt:kAudioFormatLinearPCM], AVFormatIDKey,
+                              [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
+                              nil];
+    recorder_ = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&error];
+    recorder_.delegate = self;
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *err = nil;
+    // 使用している機種が録音に対応しているか
+    if ([audioSession inputIsAvailable]) {
+      [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
     }
-    return self;
+    if(err){
+      NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+    }
+    // 録音機能をアクティブにする
+    [audioSession setActive:YES error:&err];
+    if(err){
+      NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
+    }
+    // 音量をでかくするけどなぞ
+    // http://stackoverflow.com/questions/5662297/how-to-record-and-play-sound-in-iphone-app
+    UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;                
+    AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,          
+                             sizeof (audioRouteOverride),&audioRouteOverride);
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+  [super viewDidLoad];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                          target:self 
+                                                                                          action:@selector(pressSaveButton:)];
+  self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                         target:self 
+                                                                                         action:@selector(pressCancelButton:)];
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+  return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -106,21 +112,15 @@
       field.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1];
       field.textAlignment = UITextAlignmentRight;
       field.returnKeyType = UIReturnKeyDone;
+      field.placeholder = @"あなたの名前";
       [field addTarget:self 
                 action:@selector(changeLabelField:) 
       forControlEvents:UIControlEventEditingChanged];
       cell.accessoryView = field;
     } else if (indexPath.section == 1) {
       cell.textLabel.text = @"メッセージ";
-      UITextField* field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 170, 80)];
-      field.delegate = self;
-      field.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1];
-      field.textAlignment = UITextAlignmentLeft;
-      field.returnKeyType = UIReturnKeyDone;
-      [field addTarget:self 
-                action:@selector(changeMessageField:) 
-      forControlEvents:UIControlEventEditingChanged];
-      cell.accessoryView = field;
+      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+      cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     } else if (indexPath.section == 2) {
       cell.textLabel.text = @"音声";
       recordButton_ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -167,13 +167,14 @@
 - (void)changeMessageField:(id)sender {
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-  if (indexPath.section == 1) return 100;
-  return 50;
-}
-
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
   NSLog(@"録音しますた");
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (indexPath.section == 1) {
+    UIViewController* controller = [[UIViewController alloc] init];
+  }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
