@@ -21,7 +21,7 @@
 @end
 
 @implementation DAAlarmStandbyViewController
-const NSString* GET_API_URL = @"http://phptest.kawaz.org/fetch.php";
+const NSString* GET_API_URL = @"http://dev.kawaz.org/fetch.php";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

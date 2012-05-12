@@ -15,7 +15,7 @@
 
 @implementation DARecordTableCell
 @synthesize count;
-const NSString* COUNT_API_URL = @"http://phptest.kawaz.org/count.php";
+const NSString* COUNT_API_URL = @"http://dev.kawaz.org/count.php";
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

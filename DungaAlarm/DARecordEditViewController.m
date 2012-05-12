@@ -22,11 +22,11 @@
 - (void)onSucceedCreation:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
 @end
 
-const NSString* API_URL = @"http://phptest.kawaz.org/save.php";
+const NSString* API_URL = @"http://dev.kawaz.org/save.php";
 
 @implementation DARecordEditViewController
 @synthesize recode;
-const float MAX_MEGABYTE = 1;
+const float MAX_MEGABYTE = 5;
 const NSString* LAST_NAME_KEY = @"lastUsername";
 
 - (id)initWithRecord:(DARecord *)rec {
