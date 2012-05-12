@@ -179,6 +179,7 @@ const NSString* GET_API_URL = @"http://phptest.kawaz.org/fetch.php";
 
 - (void)onEndTimer {
   [player_ play];
+  NSLog(@"%@", record_.message);
   UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@さん", record_.username] 
                                                   message:record_.message
                                                  delegate:self 

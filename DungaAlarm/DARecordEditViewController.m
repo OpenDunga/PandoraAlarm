@@ -194,14 +194,15 @@ const NSString* LAST_NAME_KEY = @"lastUsername";
                                           otherButtonTitles:nil];
     [alert show];
   } else {
-    HttpAsyncConnection* connection = [HttpAsyncConnection connection];
-    connection.delegate = self;
-    connection.finishSelector = @selector(onSucceedCreation:aConnection:);
-    NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
-    [connection connectTo:apiURL params:[recode dump] 
-                   method:@"POST" 
-                userAgent:@"DungaAlarm" 
-               httpHeader:@"namaco"];
+    player_ = [[AVAudioPlayer alloc] initWithData:rawSound error:nil];
+    [player_ play];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"投稿確認" 
+                                                    message:@"投稿します。よろしいですか？" 
+                                                   delegate:self
+                                          cancelButtonTitle:@"戻る" 
+                                          otherButtonTitles:@"投稿", nil];
+    alert.tag = RecordAlertViewTypeConfirm;
+    [alert show];
   }
   NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
   [ud setObject:self.recode.username forKey:(NSString*)LAST_NAME_KEY];
@@ -265,7 +266,32 @@ const NSString* LAST_NAME_KEY = @"lastUsername";
   self.recode.createdAt = createdAt;
   DARecordManager* manager = [DARecordManager sharedManager];
   [manager saveRecord:self.recode];
-  [self dismissModalViewControllerAnimated:YES];
+  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"投稿に成功しました" 
+                                                  message:@"" 
+                                                 delegate:self
+                                        cancelButtonTitle:@"OK" 
+                                        otherButtonTitles:nil];
+  alert.tag = RecordAlertViewTypeComplete;
+  [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if (alertView.tag == RecordAlertViewTypeConfirm) {
+    if (buttonIndex == 1) {
+      HttpAsyncConnection* connection = [HttpAsyncConnection connection];
+      connection.delegate = self;
+      connection.finishSelector = @selector(onSucceedCreation:aConnection:);
+      NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
+      [connection connectTo:apiURL params:[recode dump] 
+                     method:@"POST" 
+                  userAgent:@"DungaAlarm" 
+                 httpHeader:@"namaco"];
+    }
+  } else if (alertView.tag == RecordAlertViewTypeComplete) {
+    if (buttonIndex == 0) {
+      [self dismissModalViewControllerAnimated:YES];
+    }
+  }
 }
 
 @end

@@ -41,7 +41,7 @@
     NSDictionary* dict = [[CJSONDeserializer deserializer] deserializeAsDictionary:json error:&err];
     primaryKey = [[dict objectForKey:@"pk"] intValue];
     username = [dict objectForKey:@"username"];
-    message = [dict objectForKey:@"messsage"];
+    message = [dict objectForKey:@"message"];
     rawSound = [self dataFromHex:[dict objectForKey:@"sound"]];
   }
   return self;

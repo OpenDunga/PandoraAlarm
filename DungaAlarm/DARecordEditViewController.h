@@ -10,11 +10,17 @@
 #import <AVFoundation/AVFoundation.h>
 #import "DARecord.h"
 
-@interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, UITextFieldDelegate> {
+typedef enum {
+  RecordAlertViewTypeConfirm,
+  RecordAlertViewTypeComplete
+} RecordAlertViewType;
+
+@interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, UITextFieldDelegate, UIAlertViewDelegate> {
   BOOL recording_;
   UILabel* recordingLabel_;
   UIButton* recordButton_;
   AVAudioRecorder* recorder_;
+  AVAudioPlayer* player_;
   IBOutlet UINavigationItem* cancel_;
   IBOutlet UITableView* tableView_;
 }
