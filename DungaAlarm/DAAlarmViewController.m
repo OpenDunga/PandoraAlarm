@@ -27,6 +27,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [(UIView*)[[datePicker_ subviews] objectAtIndex:0] setBackgroundColor:[UIColor clearColor]];
+  [[[(UIView*)[[datePicker_ subviews] objectAtIndex:0] subviews] objectAtIndex:0] setHidden:YES];
+  [[[(UIView*)[[datePicker_ subviews] objectAtIndex:0] subviews] objectAtIndex:14] setHidden:YES];
 }
 
 - (void)viewDidUnload
