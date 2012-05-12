@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+typedef enum {
+  UIAlertViewTypeStop,
+  UIAlertViewTypeEnd
+} UIAlertViewType;
+
 @interface DAAlarmStandbyViewController : UIViewController <UIAlertViewDelegate> {
   BOOL loaded_;
   BOOL ended_;

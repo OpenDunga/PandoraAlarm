@@ -15,6 +15,7 @@
 - (void)onSucceed:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
 - (void)updateRemainLabel;
 - (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval separator:(NSString*)separator;
+- (void)onEndTimer;
 @end
 
 @implementation DAAlarmStandbyViewController
@@ -87,7 +88,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   if (interval <= 0) {
     ended_ = YES;
     if (loaded_) {
-      [player_ play];
+      [self onEndTimer];
     }
     [timer_ invalidate];
   }
@@ -105,7 +106,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   }
   loaded_ = YES;
   if (ended_) {
-    [player_ play];
+    [self onEndTimer];
   }
 }
 
@@ -115,6 +116,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
                                                  delegate:self 
                                         cancelButtonTitle:@"キャンセル" 
                                         otherButtonTitles:@"停止", nil];
+  alert.tag = UIAlertViewTypeStop;
   [alert show];
 }
 
@@ -124,8 +126,15 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  if (buttonIndex == 1) {
-    [self dismissModalViewControllerAnimated:YES];
+  if (alertView.tag == UIAlertViewTypeStop) {
+    if (buttonIndex == 1) {
+      [self dismissModalViewControllerAnimated:YES];
+    }
+  } else {
+    if (buttonIndex == 0) {
+      [player_ stop];
+      [self dismissModalViewControllerAnimated:YES];
+    }
   }
 }
 
@@ -148,6 +157,17 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
     [string appendFormat:@"%d", second];
   }
   return string;
+}
+
+- (void)onEndTimer {
+  [player_ play];
+  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"ほげほげさん" 
+                                                  message:@"ここにメッセージが来ます" 
+                                                 delegate:self 
+                                        cancelButtonTitle:@"キャンセル" 
+                                        otherButtonTitles:nil];
+  alert.tag = UIAlertViewTypeEnd;
+  [alert show]; 
 }
 
 @end

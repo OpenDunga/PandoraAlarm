@@ -52,6 +52,8 @@
 		078EFBC5155EC10A006AC099 /* tab_alarm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBC1155EC109006AC099 /* tab_alarm@2x.png */; };
 		078EFBC6155EC10A006AC099 /* tab_rec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBC2155EC109006AC099 /* tab_rec@2x.png */; };
 		078EFBC7155EC10A006AC099 /* wait_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBC3155EC10A006AC099 /* wait_bg@2x.png */; };
+		078EFBCA155EC6A1006AC099 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBC8155EC6A0006AC099 /* ok.png */; };
+		078EFBCB155EC6A1006AC099 /* ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBC9155EC6A0006AC099 /* ok@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,8 @@
 		078EFBC1155EC109006AC099 /* tab_alarm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_alarm@2x.png"; sourceTree = "<group>"; };
 		078EFBC2155EC109006AC099 /* tab_rec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_rec@2x.png"; sourceTree = "<group>"; };
 		078EFBC3155EC10A006AC099 /* wait_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wait_bg@2x.png"; sourceTree = "<group>"; };
+		078EFBC8155EC6A0006AC099 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ok.png; path = ../../../../Dropbox/PandoraAlarm/Images/ok.png; sourceTree = "<group>"; };
+		078EFBC9155EC6A0006AC099 /* ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ok@2x.png"; path = "../../../../Dropbox/PandoraAlarm/Images/ok@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +295,8 @@
 				078EFBC1155EC109006AC099 /* tab_alarm@2x.png */,
 				078EFBBA155EBF41006AC099 /* tab_rec.png */,
 				078EFBC2155EC109006AC099 /* tab_rec@2x.png */,
+				078EFBC8155EC6A0006AC099 /* ok.png */,
+				078EFBC9155EC6A0006AC099 /* ok@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -403,6 +409,8 @@
 				078EFBC5155EC10A006AC099 /* tab_alarm@2x.png in Resources */,
 				078EFBC6155EC10A006AC099 /* tab_rec@2x.png in Resources */,
 				078EFBC7155EC10A006AC099 /* wait_bg@2x.png in Resources */,
+				078EFBCA155EC6A1006AC099 /* ok.png in Resources */,
+				078EFBCB155EC6A1006AC099 /* ok@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
