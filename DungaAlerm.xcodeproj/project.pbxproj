@@ -29,6 +29,7 @@
 		0775CDBE155E314500275102 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0775CDBD155E314500275102 /* AudioToolbox.framework */; };
 		0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */; };
 		0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */; };
+		0775CDC8155E501700275102 /* DAAlerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDC7155E501600275102 /* DAAlerm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		0775CDC1155E4ABB00275102 /* DAMessageEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAMessageEditViewController.h; path = Record/DAMessageEditViewController.h; sourceTree = "<group>"; };
 		0775CDC2155E4ABB00275102 /* DAMessageEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAMessageEditViewController.m; path = Record/DAMessageEditViewController.m; sourceTree = "<group>"; };
 		0775CDC3155E4ABC00275102 /* DAMessageEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DAMessageEditView.xib; path = Record/DAMessageEditView.xib; sourceTree = "<group>"; };
+		0775CDC6155E501600275102 /* DAAlerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlerm.h; sourceTree = "<group>"; };
+		0775CDC7155E501600275102 /* DAAlerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlerm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 			children = (
 				0775CDB8155E260000275102 /* DARecord.h */,
 				0775CDB9155E260100275102 /* DARecord.m */,
+				0775CDC6155E501600275102 /* DAAlerm.h */,
+				0775CDC7155E501600275102 /* DAAlerm.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */,
 				0775CDBA155E260100275102 /* DARecord.m in Sources */,
 				0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */,
+				0775CDC8155E501700275102 /* DAAlerm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
