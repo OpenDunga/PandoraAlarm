@@ -60,6 +60,7 @@
 		078EFBDB155ED59B006AC099 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBD7155ED59B006AC099 /* stop@2x.png */; };
 		078EFBDE155EDA7D006AC099 /* normal_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBDC155EDA7D006AC099 /* normal_bg.png */; };
 		078EFBDF155EDA7D006AC099 /* normal_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBDD155EDA7D006AC099 /* normal_bg@2x.png */; };
+		078EFBE2155EE0DE006AC099 /* UIDatePicker_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFBE1155EE0DE006AC099 /* UIDatePicker_Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,8 @@
 		078EFBD7155ED59B006AC099 /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 		078EFBDC155EDA7D006AC099 /* normal_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal_bg.png; sourceTree = "<group>"; };
 		078EFBDD155EDA7D006AC099 /* normal_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "normal_bg@2x.png"; sourceTree = "<group>"; };
+		078EFBE0155EE0DE006AC099 /* UIDatePicker_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; path = UIDatePicker_Extension.h; sourceTree = "<group>"; };
+		078EFBE1155EE0DE006AC099 /* UIDatePicker_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDatePicker_Extension.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,8 @@
 				078EFB96155EB42C006AC099 /* HttpAsyncConnection.h */,
 				078EFB97155EB42C006AC099 /* HttpAsyncConnection.m */,
 				078EFB98155EB42C006AC099 /* KWAsyncConnectionDelegate.h */,
+				078EFBE0155EE0DE006AC099 /* UIDatePicker_Extension.h */,
+				078EFBE1155EE0DE006AC099 /* UIDatePicker_Extension.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				078EFBA9155EB42C006AC099 /* DARecordViewController.m in Sources */,
 				078EFBAE155EB42C006AC099 /* DictionaryExtention.m in Sources */,
 				078EFBAF155EB42C006AC099 /* HttpAsyncConnection.m in Sources */,
+				078EFBE2155EE0DE006AC099 /* UIDatePicker_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

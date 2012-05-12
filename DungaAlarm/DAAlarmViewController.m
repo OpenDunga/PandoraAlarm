@@ -10,6 +10,7 @@
 #import "DAAlarmStandbyViewController.h"
 #import "DAAlarm.h"
 #import "HttpAsyncConnection.h"
+#import "UIDatePicker_Extension.h"
 
 @interface DAAlarmViewController ()
 @end
@@ -27,9 +28,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [(UIView*)[[datePicker_ subviews] objectAtIndex:0] setBackgroundColor:[UIColor clearColor]];
-  [[[(UIView*)[[datePicker_ subviews] objectAtIndex:0] subviews] objectAtIndex:0] setHidden:YES];
-  [[[(UIView*)[[datePicker_ subviews] objectAtIndex:0] subviews] objectAtIndex:14] setHidden:YES];
+  [datePicker_ transparentBackground];
 }
 
 - (void)viewDidUnload
