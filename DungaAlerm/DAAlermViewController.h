@@ -11,7 +11,9 @@
 
 @interface DAAlermViewController : UIViewController {
   IBOutlet UIDatePicker* datePicker_;
-  AVAudioPlayer* player_;
+  IBOutlet UIButton* setButton_;
 }
+
+- (IBAction)pressSetButton:(id)sender;
 
 @end

@@ -20,7 +20,7 @@
 		0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA1155E1CAE00275102 /* DARecordViewController.m */; };
 		0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA6155E1D8300275102 /* DAAlermViewController.m */; };
 		0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAC155E1DB500275102 /* DARecordEditViewController.m */; };
-		0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */; };
+		0775CDB0155E1DCA00275102 /* DAAlermStandbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */; };
 		0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlermView.xib */; };
 		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
 		0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB5155E225000275102 /* DARecordEditView.xib */; };
@@ -42,6 +42,7 @@
 		0775CE56155E60B600275102 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDEA155E60B600275102 /* CJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93A155E6DDA006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CEA7155E616F00275102 /* HttpAsyncConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EF93D155E6E1A006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EF93C155E6E13006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +66,8 @@
 		0775CDA6155E1D8300275102 /* DAAlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermViewController.m; sourceTree = "<group>"; };
 		0775CDAB155E1DB500275102 /* DARecordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARecordEditViewController.h; sourceTree = "<group>"; };
 		0775CDAC155E1DB500275102 /* DARecordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARecordEditViewController.m; sourceTree = "<group>"; };
-		0775CDAE155E1DCA00275102 /* DAAlermEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermEditViewController.h; sourceTree = "<group>"; };
-		0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermEditViewController.m; sourceTree = "<group>"; };
+		0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAAlermStandbyViewController.h; sourceTree = "<group>"; };
+		0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermStandbyViewController.m; sourceTree = "<group>"; };
 		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
 		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
 		0775CDB5155E225000275102 /* DARecordEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordEditView.xib; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		078EF935155E6C7D006AC099 /* KWAsyncConnectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KWAsyncConnectionDelegate.h; path = Util/KWAsyncConnectionDelegate.h; sourceTree = "<group>"; };
 		078EF93B155E6E13006AC099 /* DictionaryExtention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DictionaryExtention.h; path = Util/DictionaryExtention.h; sourceTree = "<group>"; };
 		078EF93C155E6E13006AC099 /* DictionaryExtention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DictionaryExtention.m; path = Util/DictionaryExtention.m; sourceTree = "<group>"; };
+		078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlertStandbyView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,9 +205,10 @@
 			children = (
 				0775CDA5155E1D8300275102 /* DAAlermViewController.h */,
 				0775CDA6155E1D8300275102 /* DAAlermViewController.m */,
-				0775CDAE155E1DCA00275102 /* DAAlermEditViewController.h */,
-				0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */,
+				0775CDAE155E1DCA00275102 /* DAAlermStandbyViewController.h */,
+				0775CDAF155E1DCA00275102 /* DAAlermStandbyViewController.m */,
 				0775CDB1155E1E6E00275102 /* DAAlermView.xib */,
+				078EF93E155E9049006AC099 /* DAAlertStandbyView.xib */,
 			);
 			name = Alerm;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */,
 				0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */,
 				0775CDC5155E4ABC00275102 /* DAMessageEditView.xib in Resources */,
+				078EF93F155E9049006AC099 /* DAAlertStandbyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +375,7 @@
 				0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */,
 				0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */,
 				0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */,
-				0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */,
+				0775CDB0155E1DCA00275102 /* DAAlermStandbyViewController.m in Sources */,
 				0775CDBA155E260100275102 /* DARecord.m in Sources */,
 				0775CDC4155E4ABC00275102 /* DAMessageEditViewController.m in Sources */,
 				0775CDC8155E501700275102 /* DAAlerm.m in Sources */,
