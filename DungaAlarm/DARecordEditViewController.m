@@ -217,6 +217,7 @@ const NSString* LAST_NAME_KEY = @"lastUsername";
   [recordButton_ addTarget:self action:@selector(pressStopButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
   [recorder_ prepareToRecord];
+  [recorder_ record];
   recordingLabel_.hidden = NO;
 }
 
