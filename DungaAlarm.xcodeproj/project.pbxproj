@@ -46,6 +46,8 @@
 		078EFBAD155EB42C006AC099 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB92155EB42C006AC099 /* Icon@2x.png */; };
 		078EFBAE155EB42C006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB95155EB42C006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		078EFBAF155EB42C006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB97155EB42C006AC099 /* HttpAsyncConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		078EFBB6155EBC97006AC099 /* wait_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBB4155EBC97006AC099 /* wait_bg.png */; };
+		078EFBB7155EBC97006AC099 /* wait_bg@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFBB5155EBC97006AC099 /* wait_bg@2X.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		078EFB96155EB42C006AC099 /* HttpAsyncConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAsyncConnection.h; sourceTree = "<group>"; };
 		078EFB97155EB42C006AC099 /* HttpAsyncConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAsyncConnection.m; sourceTree = "<group>"; };
 		078EFB98155EB42C006AC099 /* KWAsyncConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWAsyncConnectionDelegate.h; sourceTree = "<group>"; };
+		078EFBB4155EBC97006AC099 /* wait_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wait_bg.png; sourceTree = "<group>"; };
+		078EFBB5155EBC97006AC099 /* wait_bg@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wait_bg@2X.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +277,8 @@
 				078EFB90155EB42C006AC099 /* Default@2X.png */,
 				078EFB91155EB42C006AC099 /* Icon.png */,
 				078EFB92155EB42C006AC099 /* Icon@2x.png */,
+				078EFBB4155EBC97006AC099 /* wait_bg.png */,
+				078EFBB5155EBC97006AC099 /* wait_bg@2X.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -379,6 +385,8 @@
 				078EFBAB155EB42C006AC099 /* Default@2X.png in Resources */,
 				078EFBAC155EB42C006AC099 /* Icon.png in Resources */,
 				078EFBAD155EB42C006AC099 /* Icon@2x.png in Resources */,
+				078EFBB6155EBC97006AC099 /* wait_bg.png in Resources */,
+				078EFBB7155EBC97006AC099 /* wait_bg@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

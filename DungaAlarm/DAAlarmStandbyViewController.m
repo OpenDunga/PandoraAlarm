@@ -13,7 +13,8 @@
 - (void)update:(NSTimer*)timer;
 - (void)onRecivedResponse:(NSURLResponse*)res aConnection:(HttpAsyncConnection*)aConnection;
 - (void)onSucceed:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
-- (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval;
+- (void)updateRemainLabel;
+- (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval separator:(NSString*)separator;
 @end
 
 @implementation DAAlarmStandbyViewController
@@ -37,14 +38,16 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
                                             selector:@selector(update:) 
                                             userInfo:nil 
                                              repeats:YES];
+    UIImage* image = [UIImage imageNamed:@"wait_bg.png"];
+    UIColor* bgColor = [UIColor colorWithPatternImage:image];
+    self.view.backgroundColor = bgColor;
   }
   return self;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  NSTimeInterval interval = [date_ timeIntervalSinceNow];
-  remainLabel_.text = [self formatedTimeFromTimeInterval:interval];
+  [self updateRemainLabel];
 }
 
 - (void)viewDidUnload {
@@ -69,7 +72,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 
 - (void)update:(NSTimer *)timer {
   NSTimeInterval interval = [date_ timeIntervalSinceNow];
-  remainLabel_.text = [self formatedTimeFromTimeInterval:interval];
+  [self updateRemainLabel];
   if (interval <= 0) {
     HttpAsyncConnection* connection = [HttpAsyncConnection connection];
     connection.delegate = self;
@@ -105,13 +108,18 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   [alert show];
 }
 
+- (void)updateRemainLabel {
+  NSTimeInterval interval = [date_ timeIntervalSinceNow];
+  remainLabel_.text = [self formatedTimeFromTimeInterval:interval separator:@":"];
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
   if (buttonIndex == 1) {
     [self dismissModalViewControllerAnimated:YES];
   }
 }
 
-- (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval {
+- (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval separator:(NSString *)separator {
   NSMutableString* string = [NSMutableString string];
   if (interval <= 0) {
     [string appendString:@"0秒"];
@@ -121,13 +129,13 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   int minute = floor((interval - 3600 * hour) / 60);
   int second = floor(interval - 3600 * hour - minute * 60);
   if (hour > 0) {
-    [string appendFormat:@"%d時間", hour];
+    [string appendFormat:@"%d%@", hour, separator];
   }
   if (minute > 0) {
-    [string appendFormat:@"%d分", minute];
+    [string appendFormat:@"%d%@", minute, separator];
   }
   if (second > 0) {
-    [string appendFormat:@"%d秒", second];
+    [string appendFormat:@"%d", second];
   }
   return string;
 }
