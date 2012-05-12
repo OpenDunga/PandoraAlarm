@@ -149,14 +149,24 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.p
   int minute = floor((interval - 3600 * hour) / 60);
   int second = floor(interval - 3600 * hour - minute * 60);
   if (hour > 0) {
-    [string appendFormat:@"%d%@", hour, separator];
+    if (hour < 10) {
+      [string appendFormat:@"0%d%@", hour, separator];
+    } else {
+      [string appendFormat:@"%d%@", hour, separator];
+    }
   }
   if (minute > 0) {
-    [string appendFormat:@"%d%@", minute, separator];
-  }
+    if (minute < 10) {
+      [string appendFormat:@"0%d%@", minute, separator];
+    } else {
+      [string appendFormat:@"%d%@", minute, separator];
+    }}
   if (second >= 0) {
-    [string appendFormat:@"%d", second];
-  }
+    if (second < 10) {
+      [string appendFormat:@"0%d", second];
+    } else {
+      [string appendFormat:@"%d", second];
+    }}
   return string;
 }
 

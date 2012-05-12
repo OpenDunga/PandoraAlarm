@@ -91,6 +91,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
   [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
   [tableView_ addSubview:recordButton_];
+  tableView_.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"normal_bg.png"]];
 }
 
 - (void)viewDidUnload {
