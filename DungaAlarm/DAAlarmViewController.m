@@ -16,6 +16,7 @@
 @end
 
 @implementation DAAlarmViewController
+const NSString* DATE_KEY = @"lastAlarmDate";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,15 @@
   // Release any retained subviews of the main view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+  NSDate* lastDate = [ud objectForKey:(NSString*)DATE_KEY];
+  if (lastDate) {
+    datePicker_.date = lastDate;
+  }
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -44,6 +54,8 @@
 
 - (IBAction)pressSetButton:(id)sender {
   NSDate* date = datePicker_.date;
+  NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+  [ud setObject:datePicker_.date forKey:(NSString*)DATE_KEY];
   if ([date timeIntervalSinceNow] <= 0) {
     date = [NSDate dateWithTimeInterval:60 * 60 * 24 sinceDate:date];
   }

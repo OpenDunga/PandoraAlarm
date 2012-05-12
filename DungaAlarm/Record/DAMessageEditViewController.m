@@ -18,7 +18,6 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"normal_bg.png"]];
   }
   return self;
 }
@@ -36,6 +35,7 @@
 {
   [super viewDidLoad];
   textView_.text = record_.message;
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"normal_bg.png"]];
 }
 
 - (void)viewDidUnload
