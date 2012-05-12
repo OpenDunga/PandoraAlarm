@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DARecord : NSObject
+@interface DARecord : NSObject <NSCoding>
 
 @property(readwrite) int primaryKey;
 @property(readwrite, strong) NSString* username;

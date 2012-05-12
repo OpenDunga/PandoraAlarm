@@ -65,4 +65,24 @@
   return stringBuffer;
 }
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+  [aCoder encodeObject:[NSNumber numberWithInt:self.primaryKey] forKey:@"primaryKey"];
+  [aCoder encodeObject:self.username forKey:@"username"];
+  [aCoder encodeObject:self.message forKey:@"message"];
+  [aCoder encodeObject:self.rawSound forKey:@"rawSound"];
+  [aCoder encodeObject:self.createdAt forKey:@"createdAt"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super init];
+  if(self) {
+    primaryKey = [(NSNumber*)[aDecoder decodeObjectForKey:@"primaryKey"] intValue];
+    self.username = [aDecoder decodeObjectForKey:@"username"];
+    self.message = [aDecoder decodeObjectForKey:@"message"];
+    self.rawSound = [aDecoder decodeObjectForKey:@"rawSound"];
+    self.createdAt = [aDecoder decodeObjectForKey:@"createdAt"];
+  }
+  return self;
+}
+
 @end
