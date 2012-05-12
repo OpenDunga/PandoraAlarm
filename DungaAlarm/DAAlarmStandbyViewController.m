@@ -86,6 +86,18 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 }
 
 - (IBAction)pressStopButton:(id)sender {
+  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"アラームの停止" 
+                                                  message:@"アラームを停止させて戻ります。よろしいですか？" 
+                                                 delegate:self 
+                                        cancelButtonTitle:@"キャンセル" 
+                                        otherButtonTitles:@"停止", nil];
+  [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  if (buttonIndex == 1) {
+    [self dismissModalViewControllerAnimated:YES];
+  }
 }
 
 @end

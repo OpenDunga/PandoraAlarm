@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface DAAlarmStandbyViewController : UIViewController {
+@interface DAAlarmStandbyViewController : UIViewController <UIAlertViewDelegate> {
   NSTimer* timer_;
   NSDate* date_;
   IBOutlet UIButton* okButton_;
