@@ -14,11 +14,21 @@
 @end
 
 @implementation DARecordEditViewController
+@synthesize recode;
+
+- (id)initWithRecord:(DARecord *)rec {
+  self = [self initWithNibName:@"" bundle:nil];
+  if (self) {
+    recode = rec;
+  }
+  return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+      recode = [[DARecord alloc] init];
       NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                                NSUserDomainMask,YES);
       NSString *documentDir = [filePaths objectAtIndex:0];    
