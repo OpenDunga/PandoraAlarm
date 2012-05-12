@@ -129,11 +129,13 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.p
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
   if (alertView.tag == UIAlertViewTypeStop) {
     if (buttonIndex == 1) {
+      [timer_ invalidate];
       [self dismissModalViewControllerAnimated:YES];
     }
   } else {
     if (buttonIndex == 0) {
       [player_ stop];
+      [timer_ invalidate];
       [self dismissModalViewControllerAnimated:YES];
     }
   }
