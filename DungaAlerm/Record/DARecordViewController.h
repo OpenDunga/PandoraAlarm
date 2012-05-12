@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARecordViewController : UIViewController
+@interface DARecordViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+- (IBAction)pressAddButton:(id)sender;
 
 @end

@@ -40,4 +40,29 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  NSString *CellIdentifier = [NSString stringWithFormat:@"Cell:%d_%d", indexPath.section, indexPath.row];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  if (cell == nil) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    cell.textLabel.text = @"hello";
+  }
+  return cell;  
+}
+
+- (IBAction)pressSaveButton:(id)sender {
+}
+
+- (IBAction)pressCancelButton:(id)sender {
+  [self dismissModalViewControllerAnimated:YES];
+}
+
 @end

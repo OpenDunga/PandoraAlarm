@@ -23,6 +23,7 @@
 		0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */; };
 		0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlermView.xib */; };
 		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
+		0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB5155E225000275102 /* DARecordEditView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermEditViewController.m; sourceTree = "<group>"; };
 		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
 		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
+		0775CDB5155E225000275102 /* DARecordEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordEditView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				0775CDAB155E1DB500275102 /* DARecordEditViewController.h */,
 				0775CDAC155E1DB500275102 /* DARecordEditViewController.m */,
 				0775CDB3155E1E7B00275102 /* DARecordView.xib */,
+				0775CDB5155E225000275102 /* DARecordEditView.xib */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				0775CD90155E1AA800275102 /* second@2x.png in Resources */,
 				0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */,
 				0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */,
+				0775CDB6155E225000275102 /* DARecordEditView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

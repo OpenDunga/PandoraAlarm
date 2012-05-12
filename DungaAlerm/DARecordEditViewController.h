@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARecordEditViewController : UIViewController
+@interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+- (IBAction)pressSaveButton:(id)sender;
+- (IBAction)pressCancelButton:(id)sender;
 
 @end
