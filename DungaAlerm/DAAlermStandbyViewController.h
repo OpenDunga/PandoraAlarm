@@ -17,6 +17,6 @@
 }
 
 - (id)initWithDate:(NSDate*)date;
-- (IBAction)pressOKButton:(id)sender;
+- (IBAction)pressStopButton:(id)sender;
 
 @end

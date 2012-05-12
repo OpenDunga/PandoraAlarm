@@ -85,7 +85,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   [player_ play];
 }
 
-- (IBAction)pressOKButton:(id)sender {
+- (IBAction)pressStopButton:(id)sender {
 }
 
 @end
