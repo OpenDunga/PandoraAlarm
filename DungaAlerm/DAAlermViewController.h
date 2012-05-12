@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DAAlermViewController : UIViewController
+@interface DAAlermViewController : UIViewController {
+  IBOutlet UIDatePicker* datePicker_;
+}
 
 @end

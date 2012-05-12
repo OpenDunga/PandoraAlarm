@@ -8,14 +8,20 @@
 
 #import "DARecordEditViewController.h"
 #import "DAMessageEditViewController.h"
+#import "HttpAsyncConnection.h"
+#import "CJSONDeserializer.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface DARecordEditViewController ()
+- (NSString*)filenameFromCurrentTime;
 - (void)pressRecordButton:(id)sender;
 - (void)pressStopButton:(id)sender;
 - (void)changeLabelField:(id)sender;
-- (void)changeMessageField:(id)sender;
+- (void)onRecivedResponse:(NSURLResponse*)res aConnection:(HttpAsyncConnection*)aConnection;
+- (void)onSucceedCreation:(NSURLConnection*)connection aConnection:(HttpAsyncConnection*)aConnection;
 @end
+
+const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 
 @implementation DARecordEditViewController
 @synthesize recode;
@@ -37,7 +43,7 @@
     NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                              NSUserDomainMask,YES);
     NSString *documentDir = [filePaths objectAtIndex:0];    
-    NSString *path = [documentDir stringByAppendingPathComponent:@"recording.caf"];
+    NSString *path = [documentDir stringByAppendingPathComponent:[self filenameFromCurrentTime]];
     NSURL *recordingURL = [NSURL fileURLWithPath:path];
     
     NSError* error = nil;
@@ -45,6 +51,7 @@
                               [NSNumber numberWithUnsignedInt:kAudioFormatLinearPCM], AVFormatIDKey,
                               [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
                               nil];
+    recode.audioURL = recordingURL;
     recorder_ = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&error];
     recorder_.delegate = self;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -134,6 +141,14 @@
   return cell;  
 }
 
+- (NSString*)filenameFromCurrentTime {
+  NSDate* date = [NSDate date];
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyyMMddHHmmss"];
+  NSString *filename = [formatter stringFromDate:date];
+  return filename;
+}
+
 - (IBAction)pressSaveButton:(id)sender {
   //NSString* path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"caf"];
   //NSURL* url = [NSURL fileURLWithPath:path];
@@ -141,7 +156,14 @@
   player_ = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
   player_.delegate = self;
   player_.volume = 1.0;
-  [player_ play];
+  //[player_ play];
+  NSData* rawSound = [NSData dataWithContentsOfURL:recorder_.url];
+  recode.rawSound = rawSound;
+  HttpAsyncConnection* connection = [HttpAsyncConnection connection];
+  connection.delegate = self;
+  connection.finishSelector = @selector(onSucceedCreation:aConnection:);
+  NSURL* apiURL = [NSURL URLWithString:(NSString*)API_URL];
+  [connection connectTo:apiURL params:[recode dump] method:@"POST" userAgent:@"DungaAlerm" httpHeader:@"namaco"];
 }
 
 - (IBAction)pressCancelButton:(id)sender {
@@ -163,9 +185,8 @@
 }
 
 - (void)changeLabelField:(id)sender {
-}
-
-- (void)changeMessageField:(id)sender {
+  UITextField* field = (UITextField*)sender;
+  recode.username = field.text;
 }
 
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
@@ -184,6 +205,20 @@
     [textField resignFirstResponder];
   }
   return YES;
+}
+
+- (void)onRecivedResponse:(NSURLResponse *)res aConnection:(HttpAsyncConnection *)aConnection {
+}
+
+- (void)onSucceedCreation:(NSURLConnection *)connection aConnection:(HttpAsyncConnection *)aConnection {
+  NSError* err;
+  NSDictionary* dict = [[CJSONDeserializer deserializer] deserializeAsDictionary:aConnection.data error:&err];
+  int pk = [[dict objectForKey:@"pk"] intValue];
+  NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+  formatter.dateFormat = @"yyyy-mm-dd HH:mm:ss";
+  NSDate* createdAt = [formatter dateFromString:[dict objectForKey:@"created_at"]];
+  self.recode.primaryKey = pk;
+  self.recode.createdAt = createdAt;
 }
 
 @end

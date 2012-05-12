@@ -10,14 +10,15 @@
 
 @interface DARecord : NSObject
 
-@property(readonly) int primaryKey;
-@property(readwrite, strong) NSString* label;
+@property(readwrite) int primaryKey;
+@property(readwrite, strong) NSString* username;
 @property(readwrite, strong) NSString* message;
-@property(readwrite, strong) NSData* rawAudio;
+@property(readwrite, strong) NSData* rawSound;
 @property(readwrite, strong) NSURL* audioURL;
-@property(readonly, strong) NSDate* createdAt;
+@property(readwrite, strong) NSDate* createdAt;
 @property(readonly) BOOL validated;
 
 - (id)initWithJSON:(NSString*)json;
+- (NSDictionary*)dump;
 
 @end
