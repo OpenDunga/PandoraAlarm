@@ -1,5 +1,5 @@
 //
-//  DASecondViewController.h
+//  DAAlermEditViewController.h
 //  DungaAlerm
 //
 //  Created by  on 2012/5/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DASecondViewController : UIViewController
+@interface DAAlermEditViewController : UIViewController
 
 @end

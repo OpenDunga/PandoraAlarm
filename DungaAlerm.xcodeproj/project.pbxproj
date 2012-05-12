@@ -13,14 +13,16 @@
 		0775CD7C155E1AA800275102 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD7A155E1AA800275102 /* InfoPlist.strings */; };
 		0775CD7E155E1AA800275102 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD7D155E1AA800275102 /* main.m */; };
 		0775CD82155E1AA800275102 /* DAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD81155E1AA800275102 /* DAAppDelegate.m */; };
-		0775CD85155E1AA800275102 /* DAFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD84155E1AA800275102 /* DAFirstViewController.m */; };
 		0775CD87155E1AA800275102 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD86155E1AA800275102 /* first.png */; };
 		0775CD89155E1AA800275102 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD88155E1AA800275102 /* first@2x.png */; };
-		0775CD8C155E1AA800275102 /* DASecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CD8B155E1AA800275102 /* DASecondViewController.m */; };
 		0775CD8E155E1AA800275102 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8D155E1AA800275102 /* second.png */; };
 		0775CD90155E1AA800275102 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD8F155E1AA800275102 /* second@2x.png */; };
-		0775CD93155E1AA800275102 /* DAFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD91155E1AA800275102 /* DAFirstViewController.xib */; };
-		0775CD96155E1AA800275102 /* DASecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD94155E1AA800275102 /* DASecondViewController.xib */; };
+		0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA1155E1CAE00275102 /* DARecordViewController.m */; };
+		0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDA6155E1D8300275102 /* DAAlermViewController.m */; };
+		0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAC155E1DB500275102 /* DARecordEditViewController.m */; };
+		0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */; };
+		0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB1155E1E6E00275102 /* DAAlermView.xib */; };
+		0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0775CDB3155E1E7B00275102 /* DARecordView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,16 +36,20 @@
 		0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DungaAlerm-Prefix.pch"; sourceTree = "<group>"; };
 		0775CD80155E1AA800275102 /* DAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAAppDelegate.h; sourceTree = "<group>"; };
 		0775CD81155E1AA800275102 /* DAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAAppDelegate.m; sourceTree = "<group>"; };
-		0775CD83155E1AA800275102 /* DAFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAFirstViewController.h; sourceTree = "<group>"; };
-		0775CD84155E1AA800275102 /* DAFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAFirstViewController.m; sourceTree = "<group>"; };
 		0775CD86155E1AA800275102 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		0775CD88155E1AA800275102 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		0775CD8A155E1AA800275102 /* DASecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DASecondViewController.h; sourceTree = "<group>"; };
-		0775CD8B155E1AA800275102 /* DASecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DASecondViewController.m; sourceTree = "<group>"; };
 		0775CD8D155E1AA800275102 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		0775CD8F155E1AA800275102 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		0775CD92155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DAFirstViewController.xib; sourceTree = "<group>"; };
-		0775CD95155E1AA800275102 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DASecondViewController.xib; sourceTree = "<group>"; };
+		0775CDA0155E1CAE00275102 /* DARecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARecordViewController.h; path = Record/DARecordViewController.h; sourceTree = "<group>"; };
+		0775CDA1155E1CAE00275102 /* DARecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARecordViewController.m; path = Record/DARecordViewController.m; sourceTree = "<group>"; };
+		0775CDA5155E1D8300275102 /* DAAlermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermViewController.h; sourceTree = "<group>"; };
+		0775CDA6155E1D8300275102 /* DAAlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermViewController.m; sourceTree = "<group>"; };
+		0775CDAB155E1DB500275102 /* DARecordEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARecordEditViewController.h; sourceTree = "<group>"; };
+		0775CDAC155E1DB500275102 /* DARecordEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARecordEditViewController.m; sourceTree = "<group>"; };
+		0775CDAE155E1DCA00275102 /* DAAlermEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAlermEditViewController.h; sourceTree = "<group>"; };
+		0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAlermEditViewController.m; sourceTree = "<group>"; };
+		0775CDB1155E1E6E00275102 /* DAAlermView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DAAlermView.xib; sourceTree = "<group>"; };
+		0775CDB3155E1E7B00275102 /* DARecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARecordView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,18 +96,14 @@
 		0775CD77155E1AA800275102 /* DungaAlerm */ = {
 			isa = PBXGroup;
 			children = (
+				0775CDA4155E1CBF00275102 /* Alerm */,
+				0775CDA3155E1CB400275102 /* Record */,
 				0775CD80155E1AA800275102 /* DAAppDelegate.h */,
 				0775CD81155E1AA800275102 /* DAAppDelegate.m */,
-				0775CD83155E1AA800275102 /* DAFirstViewController.h */,
-				0775CD84155E1AA800275102 /* DAFirstViewController.m */,
 				0775CD86155E1AA800275102 /* first.png */,
 				0775CD88155E1AA800275102 /* first@2x.png */,
-				0775CD8A155E1AA800275102 /* DASecondViewController.h */,
-				0775CD8B155E1AA800275102 /* DASecondViewController.m */,
 				0775CD8D155E1AA800275102 /* second.png */,
 				0775CD8F155E1AA800275102 /* second@2x.png */,
-				0775CD91155E1AA800275102 /* DAFirstViewController.xib */,
-				0775CD94155E1AA800275102 /* DASecondViewController.xib */,
 				0775CD78155E1AA800275102 /* Supporting Files */,
 			);
 			path = DungaAlerm;
@@ -116,6 +118,30 @@
 				0775CD7F155E1AA800275102 /* DungaAlerm-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0775CDA3155E1CB400275102 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				0775CDA0155E1CAE00275102 /* DARecordViewController.h */,
+				0775CDA1155E1CAE00275102 /* DARecordViewController.m */,
+				0775CDAB155E1DB500275102 /* DARecordEditViewController.h */,
+				0775CDAC155E1DB500275102 /* DARecordEditViewController.m */,
+				0775CDB3155E1E7B00275102 /* DARecordView.xib */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		0775CDA4155E1CBF00275102 /* Alerm */ = {
+			isa = PBXGroup;
+			children = (
+				0775CDA5155E1D8300275102 /* DAAlermViewController.h */,
+				0775CDA6155E1D8300275102 /* DAAlermViewController.m */,
+				0775CDAE155E1DCA00275102 /* DAAlermEditViewController.h */,
+				0775CDAF155E1DCA00275102 /* DAAlermEditViewController.m */,
+				0775CDB1155E1E6E00275102 /* DAAlermView.xib */,
+			);
+			name = Alerm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +201,8 @@
 				0775CD89155E1AA800275102 /* first@2x.png in Resources */,
 				0775CD8E155E1AA800275102 /* second.png in Resources */,
 				0775CD90155E1AA800275102 /* second@2x.png in Resources */,
-				0775CD93155E1AA800275102 /* DAFirstViewController.xib in Resources */,
-				0775CD96155E1AA800275102 /* DASecondViewController.xib in Resources */,
+				0775CDB2155E1E6E00275102 /* DAAlermView.xib in Resources */,
+				0775CDB4155E1E7B00275102 /* DARecordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +215,10 @@
 			files = (
 				0775CD7E155E1AA800275102 /* main.m in Sources */,
 				0775CD82155E1AA800275102 /* DAAppDelegate.m in Sources */,
-				0775CD85155E1AA800275102 /* DAFirstViewController.m in Sources */,
-				0775CD8C155E1AA800275102 /* DASecondViewController.m in Sources */,
+				0775CDA2155E1CAE00275102 /* DARecordViewController.m in Sources */,
+				0775CDA7155E1D8300275102 /* DAAlermViewController.m in Sources */,
+				0775CDAD155E1DB500275102 /* DARecordEditViewController.m in Sources */,
+				0775CDB0155E1DCA00275102 /* DAAlermEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,22 +231,6 @@
 				0775CD7B155E1AA800275102 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0775CD91155E1AA800275102 /* DAFirstViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0775CD92155E1AA800275102 /* en */,
-			);
-			name = DAFirstViewController.xib;
-			sourceTree = "<group>";
-		};
-		0775CD94155E1AA800275102 /* DASecondViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0775CD95155E1AA800275102 /* en */,
-			);
-			name = DASecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

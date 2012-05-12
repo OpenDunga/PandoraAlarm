@@ -1,33 +1,32 @@
 //
-//  DASecondViewController.m
+//  DAAlermEditViewController.m
 //  DungaAlerm
 //
 //  Created by  on 2012/5/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "DASecondViewController.h"
+#import "DAAlermEditViewController.h"
 
-@interface DASecondViewController ()
+@interface DAAlermEditViewController ()
 
 @end
 
-@implementation DASecondViewController
+@implementation DAAlermEditViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-    self.title = NSLocalizedString(@"Second", @"Second");
-    self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        // Custom initialization
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
@@ -38,7 +37,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

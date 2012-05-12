@@ -8,9 +8,9 @@
 
 #import "DAAppDelegate.h"
 
-#import "DAFirstViewController.h"
+#import "DAAlermViewController.h"
 
-#import "DASecondViewController.h"
+#import "DARecordViewController.h"
 
 @implementation DAAppDelegate
 
@@ -21,8 +21,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-  UIViewController *viewController1 = [[DAFirstViewController alloc] initWithNibName:@"DAFirstViewController" bundle:nil];
-  UIViewController *viewController2 = [[DASecondViewController alloc] initWithNibName:@"DASecondViewController" bundle:nil];
+  UIViewController *viewController1 = [[DAAlermViewController alloc] initWithNibName:@"DAAlermView" bundle:nil];
+  UIViewController *viewController2 = [[DARecordViewController alloc] initWithNibName:@"DARecordView" bundle:nil];
   self.tabBarController = [[UITabBarController alloc] init];
   self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
   self.window.rootViewController = self.tabBarController;
