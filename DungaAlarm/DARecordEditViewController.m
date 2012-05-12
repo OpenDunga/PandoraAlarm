@@ -143,6 +143,7 @@ const NSString* LAST_NAME_KEY = @"lastUsername";
       NSString* lastName = [ud objectForKey:(NSString*)LAST_NAME_KEY];
       if (lastName) {
         field.text = lastName;
+        self.recode.username = lastName;
       }
       [field addTarget:self 
                 action:@selector(changeLabelField:) 
