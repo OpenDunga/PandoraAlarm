@@ -22,7 +22,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
   UIViewController *viewController1 = [[DAAlarmViewController alloc] initWithNibName:@"DAAlarmView" bundle:nil];
+  UITabBarItem* item1 = [[UITabBarItem alloc] initWithTitle:@"アラーム" image:[UIImage imageNamed:@"tab_alarm.png"] tag:0];
+  viewController1.tabBarItem = item1;
+  
   UIViewController *viewController2 = [[DARecordViewController alloc] initWithNibName:@"DARecordView" bundle:nil];
+  UITabBarItem* item2 = [[UITabBarItem alloc] initWithTitle:@"録音" image:[UIImage imageNamed:@"tab_rec.png"] tag:1];
+  viewController2.tabBarItem = item2;
+  
   self.tabBarController = [[UITabBarController alloc] init];
   self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
   self.window.rootViewController = self.tabBarController;
