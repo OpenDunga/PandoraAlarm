@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface DAAlermViewController : UIViewController {
   IBOutlet UIDatePicker* datePicker_;
+  AVAudioPlayer* player_;
 }
 
 @end
