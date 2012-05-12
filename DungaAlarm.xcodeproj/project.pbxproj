@@ -33,7 +33,6 @@
 		078EFB9F155EB42C006AC099 /* DARecordEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB7A155EB42C006AC099 /* DARecordEditView.xib */; };
 		078EFBA0155EB42C006AC099 /* DARecordEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB7C155EB42C006AC099 /* DARecordEditViewController.m */; };
 		078EFBA1155EB42C006AC099 /* DARecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB7D155EB42C006AC099 /* DARecordView.xib */; };
-		078EFBA2155EB42C006AC099 /* DungaAlarm-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB7E155EB42C006AC099 /* DungaAlarm-Info.plist */; };
 		078EFBA3155EB42C006AC099 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB80155EB42C006AC099 /* InfoPlist.strings */; };
 		078EFBA4155EB42C006AC099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB82155EB42C006AC099 /* main.m */; };
 		078EFBA5155EB42C006AC099 /* DARecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB85155EB42C006AC099 /* DARecord.m */; };
@@ -45,8 +44,8 @@
 		078EFBAB155EB42C006AC099 /* Default@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB90155EB42C006AC099 /* Default@2X.png */; };
 		078EFBAC155EB42C006AC099 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB91155EB42C006AC099 /* Icon.png */; };
 		078EFBAD155EB42C006AC099 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 078EFB92155EB42C006AC099 /* Icon@2x.png */; };
-		078EFBAE155EB42C006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB95155EB42C006AC099 /* DictionaryExtention.m */; };
-		078EFBAF155EB42C006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB97155EB42C006AC099 /* HttpAsyncConnection.m */; };
+		078EFBAE155EB42C006AC099 /* DictionaryExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB95155EB42C006AC099 /* DictionaryExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		078EFBAF155EB42C006AC099 /* HttpAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 078EFB97155EB42C006AC099 /* HttpAsyncConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -374,7 +373,6 @@
 				078EFB9C155EB42C006AC099 /* DAAlarmView.xib in Resources */,
 				078EFB9F155EB42C006AC099 /* DARecordEditView.xib in Resources */,
 				078EFBA1155EB42C006AC099 /* DARecordView.xib in Resources */,
-				078EFBA2155EB42C006AC099 /* DungaAlarm-Info.plist in Resources */,
 				078EFBA3155EB42C006AC099 /* InfoPlist.strings in Resources */,
 				078EFBA7155EB42C006AC099 /* DAMessageEditView.xib in Resources */,
 				078EFBAA155EB42C006AC099 /* Default.png in Resources */,
