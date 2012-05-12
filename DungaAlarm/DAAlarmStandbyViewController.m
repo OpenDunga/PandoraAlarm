@@ -41,17 +41,25 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   NSTimeInterval interval = [date_ timeIntervalSinceNow];
   remainLabel_.text = [self formatedTimeFromTimeInterval:interval];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
   [super viewDidUnload];
   // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+  [super viewDidDisappear:animated];
+  [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
