@@ -18,5 +18,6 @@
 + (id)sharedManager;
 - (NSArray*)loadRecordFromStorage;
 - (void)saveRecord:(DARecord*)record;
+- (NSUInteger)count;
 
 @end

@@ -33,16 +33,29 @@ const NSString* RECORD_KEY = @"records";
 - (void)saveRecord:(DARecord *)record {
   [records_ addObject:record];
   NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-  [ud setObject:record forKey:(NSString*)RECORD_KEY];
+  NSMutableArray* array = [NSMutableArray array];
+  for (DARecord* record in self.records) {
+    NSData* d = [NSKeyedArchiver archivedDataWithRootObject:record];
+    [array addObject:d];
+  }
+  [ud setObject:array forKey:(NSString*)RECORD_KEY];
 }
 
 - (NSArray*)loadRecordFromStorage {
   NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-  NSArray* records = [ud objectForKey:(NSString*)RECORD_KEY];
-  if (records) {
-    return records;
+  NSArray* archives = [ud objectForKey:(NSString*)RECORD_KEY];
+  NSMutableArray* records = [NSMutableArray array];
+  if (archives) {
+    for (NSData* data in archives) {
+      DARecord* record = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+      [records addObject:record];
+    }
   }
-  return [NSArray array];
+  return records;
+}
+
+- (NSUInteger)count {
+  return [self.records count];
 }
 
 @end

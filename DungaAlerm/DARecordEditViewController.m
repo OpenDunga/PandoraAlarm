@@ -10,6 +10,7 @@
 #import "DAMessageEditViewController.h"
 #import "HttpAsyncConnection.h"
 #import "CJSONDeserializer.h"
+#import "DARecordManager.h"
 #import <AudioToolbox/AudioToolbox.h>
 
 @interface DARecordEditViewController ()
@@ -51,7 +52,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
                               [NSNumber numberWithUnsignedInt:kAudioFormatLinearPCM], AVFormatIDKey,
                               [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
                               nil];
-    recode.audioURL = recordingURL;
+    recode.soundURL = recordingURL;
     recorder_ = [[AVAudioRecorder alloc] initWithURL:recordingURL settings:settings error:&error];
     recorder_.delegate = self;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -219,6 +220,8 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   NSDate* createdAt = [formatter dateFromString:[dict objectForKey:@"created_at"]];
   self.recode.primaryKey = pk;
   self.recode.createdAt = createdAt;
+  DARecordManager* manager = [DARecordManager sharedManager];
+  [manager saveRecord:self.recode];
 }
 
 @end
