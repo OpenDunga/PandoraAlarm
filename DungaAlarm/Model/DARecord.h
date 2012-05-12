@@ -17,7 +17,7 @@
 @property(readwrite, strong) NSURL* soundURL;
 @property(readwrite, strong) NSDate* createdAt;
 
-- (id)initWithJSON:(NSString*)json;
+- (id)initWithJSON:(NSData*)json;
 - (NSDictionary*)dump;
 - (BOOL)validated;
 

@@ -7,6 +7,7 @@
 //
 
 #import "DARecord.h"
+#import "CJSONDeserializer.h"
 
 @interface DARecord()
 - (NSString*)stringWithBytes:(NSData*)data;
@@ -33,9 +34,15 @@
   return self;
 }
 
-- (id)initWithJSON:(NSString *)json {
+- (id)initWithJSON:(NSData *)json {
   self = [super init];
   if (self) {
+    NSError* err;
+    NSDictionary* dict = [[CJSONDeserializer deserializer] deserializeAsDictionary:json error:&err];
+    primaryKey = [[dict objectForKey:@"pk"] intValue];
+    username = [dict objectForKey:@"username"];
+    message = [dict objectForKey:@"messsage"];
+    rawSound = [self dataFromHex:[dict objectForKey:@"sound"]];
   }
   return self;
 }
@@ -85,6 +92,21 @@
     self.createdAt = [aDecoder decodeObjectForKey:@"createdAt"];
   }
   return self;
+}
+
+- (NSData*)dataFromHex:(NSString*)hex {
+  NSString* command = [hex stringByReplacingOccurrencesOfString:@" " withString:@""];
+  NSMutableData *commandToSend= [[NSMutableData alloc] init];
+  unsigned char whole_byte;
+  char byte_chars[3] = {'\0','\0','\0'};
+  int i;
+  for (i=0; i < [command length]/2; i++) {
+    byte_chars[0] = [command characterAtIndex:i*2];
+    byte_chars[1] = [command characterAtIndex:i*2+1];
+    whole_byte = strtol(byte_chars, NULL, 16);
+    [commandToSend appendBytes:&whole_byte length:1]; 
+  }
+  return commandToSend;
 }
 
 @end

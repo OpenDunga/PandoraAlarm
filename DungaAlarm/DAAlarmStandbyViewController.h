@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "DARecord.h"
 
 typedef enum {
   UIAlertViewTypeStop,
@@ -21,6 +22,7 @@ typedef enum {
   NSDate* date_;
   IBOutlet UILabel* remainLabel_;
   AVAudioPlayer* player_;
+  DARecord* record_;
 }
 
 - (id)initWithDate:(NSDate*)date;

@@ -19,7 +19,7 @@
 @end
 
 @implementation DAAlarmStandbyViewController
-const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php";
+const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/fetch.php";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -99,7 +99,8 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 
 - (void)onSucceed:(NSURLConnection *)connection aConnection:(HttpAsyncConnection *)aConnection {
   NSError* err;
-  player_ = [[AVAudioPlayer alloc] initWithData:aConnection.data error:&err];
+  record_ = [[DARecord alloc] initWithJSON:aConnection.data];
+  player_ = [[AVAudioPlayer alloc] initWithData:record_.rawSound error:&err];
   player_.numberOfLoops = -1;
   if (err) {
     NSLog(@"%@", err);
@@ -153,7 +154,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
   if (minute > 0) {
     [string appendFormat:@"%d%@", minute, separator];
   }
-  if (second > 0) {
+  if (second >= 0) {
     [string appendFormat:@"%d", second];
   }
   return string;
@@ -161,8 +162,8 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 
 - (void)onEndTimer {
   [player_ play];
-  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"ほげほげさん" 
-                                                  message:@"ここにメッセージが来ます" 
+  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@さん", record_.username] 
+                                                  message:record_.message
                                                  delegate:self 
                                         cancelButtonTitle:@"キャンセル" 
                                         otherButtonTitles:nil];
