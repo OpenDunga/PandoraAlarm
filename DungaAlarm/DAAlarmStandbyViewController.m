@@ -132,7 +132,7 @@ const NSString* GET_API_URL = @"http://192.168.11.125/~takamatsu/cookpad/get.php
 - (NSString*)formatedTimeFromTimeInterval:(NSTimeInterval)interval separator:(NSString *)separator {
   NSMutableString* string = [NSMutableString string];
   if (interval <= 0) {
-    [string appendString:@"0秒"];
+    [string appendString:@"0"];
     return string;
   }
   int hour = floor(interval / 3600);
