@@ -78,8 +78,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                                                           target:self 
@@ -87,10 +86,14 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                          target:self 
                                                                                          action:@selector(pressCancelButton:)];
+  recordButton_ = [UIButton buttonWithType:UIButtonTypeCustom];
+  recordButton_.frame = CGRectMake(100, 200, 120, 120);
+  [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
+  [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
+  [tableView_ addSubview:recordButton_];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
   [super viewDidUnload];
   // Release any retained subviews of the main view.
 }
@@ -101,7 +104,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return 3;
+  return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -130,13 +133,6 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
       cell.textLabel.text = @"メッセージ";
       cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
       cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-    } else if (indexPath.section == 2) {
-      cell.textLabel.text = @"音声";
-      recordButton_ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-      recordButton_.frame = CGRectMake(10, 150, 150, 45);
-      [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
-      [recordButton_ setTitle:@"録音" forState:UIControlStateNormal];
-      cell.accessoryView = recordButton_;
     }
   }
   return cell;  
@@ -151,8 +147,6 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 }
 
 - (IBAction)pressSaveButton:(id)sender {
-  //NSString* path = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"caf"];
-  //NSURL* url = [NSURL fileURLWithPath:path];
   NSURL* url = recorder_.url;
   player_ = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
   player_.delegate = self;
@@ -173,7 +167,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 
 - (void)pressRecordButton:(id)sender {
   [recordButton_ addTarget:self action:@selector(pressStopButton:) forControlEvents:UIControlEventTouchUpInside];
-  [recordButton_ setTitle:@"停止" forState:UIControlStateNormal];
+  [recordButton_ setImage:[UIImage imageNamed:@"stop.png"] forState:UIControlStateNormal];
   [recorder_ prepareToRecord];
   BOOL result = [recorder_ record];
   NSLog(@"%d", result);
@@ -181,7 +175,7 @@ const NSString* API_URL = @"http://192.168.11.125/~takamatsu/cookpad/save.php";
 
 - (void)pressStopButton:(id)sender {
   [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
-  [recordButton_ setTitle:@"録音" forState:UIControlStateNormal];
+  [recordButton_ setImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
   [recorder_ stop];
 }
 
