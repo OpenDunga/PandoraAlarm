@@ -7,10 +7,13 @@
 //
 
 #import "DARecordEditViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface DARecordEditViewController ()
 - (void)pressRecordButton:(id)sender;
 - (void)pressStopButton:(id)sender;
+- (void)changeLabelField:(id)sender;
+- (void)changeMessageField:(id)sender;
 @end
 
 @implementation DARecordEditViewController
@@ -56,6 +59,11 @@
       if(err){
         NSLog(@"audioSession: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
       }
+      // 音量をでかくするけどなぞ
+      // http://stackoverflow.com/questions/5662297/how-to-record-and-play-sound-in-iphone-app
+      UInt32 audioRouteOverride = kAudioSessionOverrideAudioRoute_Speaker;                
+      AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,          
+                               sizeof (audioRouteOverride),&audioRouteOverride);
     }
     return self;
 }
@@ -90,8 +98,31 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    cell.textLabel.text = @"hello";
-    if (indexPath.section == 2) {
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (indexPath.section == 0) {
+      cell.textLabel.text = @"名前";
+      UITextField* field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 170, 25)];
+      field.delegate = self;
+      field.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1];
+      field.textAlignment = UITextAlignmentRight;
+      field.returnKeyType = UIReturnKeyDone;
+      [field addTarget:self 
+                action:@selector(changeLabelField:) 
+      forControlEvents:UIControlEventEditingChanged];
+      cell.accessoryView = field;
+    } else if (indexPath.section == 1) {
+      cell.textLabel.text = @"メッセージ";
+      UITextField* field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 170, 80)];
+      field.delegate = self;
+      field.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1];
+      field.textAlignment = UITextAlignmentLeft;
+      field.returnKeyType = UIReturnKeyDone;
+      [field addTarget:self 
+                action:@selector(changeMessageField:) 
+      forControlEvents:UIControlEventEditingChanged];
+      cell.accessoryView = field;
+    } else if (indexPath.section == 2) {
+      cell.textLabel.text = @"音声";
       recordButton_ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
       recordButton_.frame = CGRectMake(10, 150, 150, 45);
       [recordButton_ addTarget:self action:@selector(pressRecordButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -108,6 +139,7 @@
   NSURL* url = recorder_.url;
   player_ = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
   player_.delegate = self;
+  player_.volume = 1.0;
   [player_ play];
 }
 
@@ -129,8 +161,26 @@
   [recorder_ stop];
 }
 
+- (void)changeLabelField:(id)sender {
+}
+
+- (void)changeMessageField:(id)sender {
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (indexPath.section == 1) return 100;
+  return 50;
+}
+
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
   NSLog(@"録音しますた");
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  if([textField canResignFirstResponder]) {
+    [textField resignFirstResponder];
+  }
+  return YES;
 }
 
 @end

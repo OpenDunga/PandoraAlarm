@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "DARecord.h"
 
-@interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate> {
+@interface DARecordEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITextFieldDelegate> {
   UIButton* recordButton_;
   AVAudioRecorder* recorder_;
   AVAudioPlayer* player_;
